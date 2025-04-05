@@ -1,4 +1,4 @@
-.header{
+  .header{
   @include flex-space-between;
   position: fixed;
   @media (max-width: 1200px) {
