@@ -1,0 +1,100 @@
+@import "globals";
+@import "mixins";
+@import "normalize";
+@import "variables";
+@import "block/header";
+@import "block/modal-windows";
+main {
+  display: flex;
+  max-width: 80%;
+  margin: 15% 10% 0;
+}
+.normal-slider{
+  display: flex;
+  min-width: 100%;
+  flex-direction: column;
+}
+.header-normal-slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h2{
+    margin: 0;
+    text-indent: 1em;
+  }
+}
+.header-normal-slider-leftSide{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  > * + *{
+    margin-left: .5em;
+  }
+  a{
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--main-color-DarkGray);
+    border: 1px solid var(--main-color-DarkGray);
+    border-radius: 1em;
+    padding: 0 .5em;
+    transition: .5s;
+    &:hover{
+      color: var(--main-font-color);
+      border-color: var(--main-font-color);
+      background-color: var(--main-color-whiteGray);
+    }
+  }
+}
+
+.header-normal-slider-rightSide {
+  color: var(--main-color-DarkGray);
+  svg:hover{
+    color: var(--main-font-color);
+    cursor: pointer;
+    transition: .5s;
+    transform: scale(1.1);
+  }
+}
+.content-normal-slider{
+  display: flex;
+  a{
+    max-width: 33%;
+    color: var(main-font-color);
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+.normal-slide{
+  transition: .5s;
+  padding: 1em .5em;
+  border-radius: 1em;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  &:hover{
+    background-color: var(--main-color-Gray);
+    .slide-img img{
+    transform: scale(1.1);
+    }
+  }
+}
+.slide-img {
+  border: 1px solid white;
+  border-radius: 1em;
+  overflow: hidden;
+  img{
+    scale: 1.1;
+    width: 100%;
+    height: 100%;
+  }
+}
+@font-face {
+  font-family: Inter;
+  font-weight: normal;
+  src: url("../fonts/Inter/Inter-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: Inter;
+  font-weight: bold;
+  src: url("../fonts/Inter/Inter-Bold.otf") format("opentype");
+}

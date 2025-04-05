@@ -1,0 +1,19 @@
+@mixin flex-space-between{
+  display: flex;
+  justify-content: space-between;
+}
+@mixin flex-column{
+  display: flex;
+  flex-direction: column;
+}
+@mixin modal-window($width,$height){
+  position: absolute;
+  z-index: var(--z-index-modal-window);
+  width: $width;
+  height: $height;
+  left: calc(50% - $width/2);
+  top: calc(50% - $height/2);
+  background-color: white;
+  transition: .3s;
+  transform: scale(0);
+}
