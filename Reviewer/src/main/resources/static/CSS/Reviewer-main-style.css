@@ -1,5 +1,5 @@
 body {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -460,12 +460,12 @@ main {
 @font-face {
   font-family: Inter;
   font-weight: normal;
-  src: url("../fonts/Inter/Inter-Medium.otf") format("opentype");
+  src: url("fonts/Inter/Inter-Medium.otf") format("opentype");
 }
 @font-face {
   font-family: Inter;
   font-weight: bold;
-  src: url("../fonts/Inter/Inter-Bold.otf") format("opentype");
+  src: url("fonts/Inter/Inter-Bold.otf") format("opentype");
 }
 
 /*# sourceMappingURL=Reviewer-main-style.css.map */
