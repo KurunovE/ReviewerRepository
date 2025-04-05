@@ -194,12 +194,15 @@ body {
 }
 
 .modal-background {
-  display: none;
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: var(--z-index-modal-background);
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal-background-inactive {
+  display: none;
 }
 
 .modal-window {
@@ -211,8 +214,15 @@ body {
   top: calc(50% - 12.5rem);
   background-color: white;
   transition: 0.3s;
-  transform: scale(0);
   color: var(--main-font-color);
+}
+
+.modal-window-active {
+  transform: scale(1);
+}
+
+.modal-window-inactive {
+  transform: scale(0);
 }
 
 .geolocation-modal-window {
@@ -295,14 +305,13 @@ body {
   top: calc(50% - 10rem);
   background-color: white;
   transition: 0.3s;
-  transform: scale(0);
   border-radius: 20px;
   overflow: hidden;
 }
 .login-modal-window__header {
   display: flex;
   gap: 20px;
-  padding: 10px;
+  padding: 20px 20px 0;
   color: var(--main-color-whiteGray);
 }
 .login-modal-window__login-button, .login-modal-window__register-button {
@@ -321,7 +330,6 @@ body {
   width: 200%;
   position: absolute;
   display: flex;
-  flex-direction: row-reverse;
   margin: 0;
   transition: 0.5s;
 }
@@ -333,10 +341,10 @@ body {
   flex-direction: column;
 }
 .login-modal-window__main-content-menu-login-input {
-  margin: 0 30px;
+  margin: 10px 50px;
 }
 .login-modal-window__main-content-menu-register-input {
-  margin: 0 30px;
+  margin: 0 50px;
 }
 .login-modal-window__confirm-button {
   position: absolute;
@@ -348,6 +356,22 @@ body {
 
 .focus-button {
   color: var(--main-font-color);
+}
+
+.login-button-active {
+  color: var(--main-font-color);
+}
+
+.register-button-active {
+  color: var(--main-font-color);
+}
+
+.login-input-active {
+  transform: translateX(0);
+}
+
+.register-input-active {
+  transform: translateX(-50%);
 }
 
 .login-input {

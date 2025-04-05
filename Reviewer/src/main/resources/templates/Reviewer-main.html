@@ -27,6 +27,55 @@
     </div>
     <button class="header__button button">Войти</button>
 </header>
+<div class="modal-background modal-background-inactive"></div>
+<div class="geolocation-modal-window modal-window modal-window-inactive">
+    <div class="geolocation-modal-window__header">
+        <svg class = "geolocation-modal-window__close-button close-button" width="1em" height="1em" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9706 11.9706C12.3611 11.58 12.3611 10.9469 11.9706 10.5563L7.72792 6.31371L11.9706 2.07107C12.3611 1.68054 12.3611 1.04738 11.9706 0.656853C11.58 0.266329 10.9469 0.266329 10.5563 0.656853L6.31371 4.8995L2.07107 0.656855C1.68054 0.266331 1.04738 0.266331 0.656853 0.656856C0.266329 1.04738 0.266328 1.68054 0.656852 2.07107L4.89949 6.31371L0.656853 10.5563C0.266329 10.9469 0.266329 11.58 0.656853 11.9706C1.04738 12.3611 1.68054 12.3611 2.07107 11.9706L6.31371 7.72792L10.5563 11.9706C10.9469 12.3611 11.58 12.3611 11.9706 11.9706Z" fill="currentColor"/>
+        </svg>
+        <h3 class="geolocation-modal-window__title">
+            Выберите город
+        </h3>
+        <div class="geolocation-modal-window__search">
+            <svg  class = "geolocation-modal-window__search-icon" width="1em" height="1em" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7 17C8.55556 17 14 11.3333 14 7.28571C14 3.2381 10.866 0 7 0C3.13401 0 0 3.26193 0 7.28571C0 11.3333 5.44444 17 7 17ZM7.09801 9.91667C8.81623 9.91667 10.2091 8.64814 10.2091 7.08333C10.2091 5.51853 8.81623 4.25 7.09801 4.25C5.37979 4.25 3.9869 5.51853 3.9869 7.08333C3.9869 8.64814 5.37979 9.91667 7.09801 9.91667Z" fill="currentColor"/>
+            </svg>
 
+            <input type="text" class="geolocation-modal-window__input search-input" value="Санкт-Петербург">
+        </div>
+
+    </div>
+    <div class="geolocation-modal-window__content-list select-list">
+        <ul>
+
+        </ul>
+    </div>
+</div>
+<div class="login-modal-window modal-window modal-window-inactive">
+    <div class="login-modal-window__header">
+        <svg class = "login-modal-window__close-button close-button" width="1em" height="1em" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9706 11.9706C12.3611 11.58 12.3611 10.9469 11.9706 10.5563L7.72792 6.31371L11.9706 2.07107C12.3611 1.68054 12.3611 1.04738 11.9706 0.656853C11.58 0.266329 10.9469 0.266329 10.5563 0.656853L6.31371 4.8995L2.07107 0.656855C1.68054 0.266331 1.04738 0.266331 0.656853 0.656856C0.266329 1.04738 0.266328 1.68054 0.656852 2.07107L4.89949 6.31371L0.656853 10.5563C0.266329 10.9469 0.266329 11.58 0.656853 11.9706C1.04738 12.3611 1.68054 12.3611 2.07107 11.9706L6.31371 7.72792L10.5563 11.9706C10.9469 12.3611 11.58 12.3611 11.9706 11.9706Z" fill="currentColor"/>
+        </svg>
+        <div class="login-modal-window__login-button login-button-active">Войти</div>
+        <div class="login-modal-window__register-button">Регистрация</div>
+    </div>
+    <div class="login-modal-window__main-content login-input-active">
+        <div class="login-modal-window__main-content-menu">
+            <input type="text" class="login-modal-window__main-content-menu-login-input login-input" placeholder="Email">
+            <input type="password" class="login-modal-window__main-content-menu-login-input login-input" placeholder="Пароль">
+        </div>
+        <div class="login-modal-window__main-content-menu">
+            <input type="text" class="login-modal-window__main-content-menu-register-input login-input" placeholder="Имя пользователя">
+            <input type="text" class="login-modal-window__main-content-menu-register-input login-input" placeholder="Email">
+            <input type="password" class="login-modal-window__main-content-menu-register-input login-input" placeholder="Пароль">
+            <input type="password" class="login-modal-window__main-content-menu-register-input login-input" placeholder="Повторите пароль">
+        </div>
+    </div>
+    <button class="login-modal-window__confirm-button button">Готово</button>
+</div>
+<main>
+
+</main>
+<script defer src="../static/JS/Reviewer-main.js"></script>
 </body>
 </html>
