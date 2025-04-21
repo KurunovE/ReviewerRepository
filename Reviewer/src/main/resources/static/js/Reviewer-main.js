@@ -17,7 +17,7 @@ for (let i = 0; i < 6; i++ ){
     redirect.href = "https://www.google.com";
     redirect.classList.add("main__collection-redirect-block");
     let img = document.createElement("img");
-    img.src = `../static/slide/${images[imgCount]}`;
+    img.src = `/slide/${images[imgCount]}`;
     mainCollection.appendChild(redirect);
     redirect.appendChild(img);
 }
@@ -25,7 +25,7 @@ for (let image of images) {
     let imgRedirect = document.createElement("a");
     imgRedirect.href = "https://www.google.com";
     let img = document.createElement("img");
-    img.src = `../static/slide/${image}`;
+    img.src = `/slide/${image}`;
     img.classList.add("image-slide");
     imgRedirect.classList.add("swiper-slide");
     bigSliderLine.appendChild(imgRedirect);
@@ -35,7 +35,7 @@ for (let image of images) {
     let imgRedirect = document.createElement("a");
     imgRedirect.href = "https://www.google.com";
     let img = document.createElement("img");
-    img.src = `../static/slide/${image}`;
+    img.src = `/slide/${image}`;
     imgRedirect.classList.add("swiper-slide");
     img.classList.add("main__normal-slide-img");
     normalSliderLine.appendChild(imgRedirect);
@@ -46,7 +46,7 @@ for (let image of images) {
     let imgRedirect = document.createElement("a");
     imgRedirect.href = "https://www.google.com";
     let img = document.createElement("img");
-    img.src = `../static/slide/${image}`;
+    img.src = `/slide/${image}`;
     imgRedirect.classList.add("swiper-slide");
     img.classList.add("main__normal-slide-img");
     secondNormalSliderLine.appendChild(imgRedirect);
@@ -57,7 +57,7 @@ for (let image of images) {
     let imgRedirect = document.createElement("a");
     imgRedirect.href = "https://www.google.com";
     let img = document.createElement("img");
-    img.src = `../static/slide/${image}`;
+    img.src = `/slide/${image}`;
     imgRedirect.classList.add("swiper-slide");
     img.classList.add("main__normal-slide-img");
     thirdNormalSliderLine.appendChild(imgRedirect);
