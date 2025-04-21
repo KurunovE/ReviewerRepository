@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Reviewer</title>
+    <link rel="stylesheet"  href = "../static/CSS/Reviewer-main-style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+<header class="header">
+    <a href="Reviewer-main.html"><div class="header__site-name">
+        Revie <svg width="1em" height="1em" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M2 13V8.5L2.00004 8.5L4.23328 5.99999L5.50005 5.99999L3.5 8.5H5.26677L5.26676 8.50001L6.76672 8.50001L6.76673 8.5H8.50004L10.7333 5.99999L12 5.99999L10 8.5H12.5V13C12.5 13.2761 12.2761 13.5 12 13.5H2.5C2.22386 13.5 2 13.2761 2 13ZM6.76673 8.5L8.76677 6L7.5 6L5.26677 8.5L6.76673 8.5ZM10.7476 0.0493882C10.8722 0.0165994 11.0005 0 11.1294 0H11.382C11.9501 0 12.4695 0.321003 12.7236 0.829179L12.8416 1.06525C12.9458 1.27353 13 1.5032 13 1.73607V2.25176C13 2.91717 12.5616 3.50305 11.9232 3.69081L7.472 5H13H13.5V5.5V13C13.5 13.8284 12.8284 14.5 12 14.5H2.5C1.67157 14.5 1 13.8284 1 13V7.43037C0.731698 7.34447 0.479739 7.17541 0.309754 6.90301C0.183602 6.70086 0 6.35947 0 6C0 5.60792 0.219436 5.23202 0.354243 5.02768C0.454159 4.87623 0.5 4.73728 0.5 4.62024V4.23607C0.5 4.0032 0.554218 3.77353 0.658359 3.56525L0.850432 3.1811C1.04337 2.79523 1.39311 2.5111 1.81033 2.40131L10.7476 0.0493882ZM2 7C2.55228 7 3 6.55228 3 6C3 5.44772 2.55228 5 2 5C1.44772 5 1 5.44772 1 6C1 6.55228 1.44772 7 2 7ZM8.73081 1.15436L9.54589 0.91315L10.3288 1.46124L10.7798 2.05781L11.0053 2.35609L11.2308 2.65438L10.7798 2.78487L10.3288 2.91536L9.54589 2.02576L8.73081 1.15436ZM6.81512 1.77069L6.00005 2.0119L6.81512 2.8833L7.59802 3.77291L8.04904 3.64241L8.50005 3.51192L8.27455 3.21364L8.04904 2.91535L7.59802 2.31878L6.81512 1.77069ZM3.86142 2.49996L3 2.76389L3.81507 3.63528L4.59797 4.52489L5.04899 4.3944L5.50001 4.2639L5.2745 3.96562L5.04899 3.66733L4.59797 3.07076L3.86142 2.49996Z" fill="currentColor"/>
+    </svg>
+        er
+    </div></a>
+    <div class="header__search">
+        <svg  class = "header__search-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.49964 0C3.36659 0 0 3.36659 0 7.49964C0 11.6327 3.36659 14.9993 7.49964 14.9993C9.29693 14.9993 10.9475 14.361 12.2411 13.3016L16.7189 17.7794C16.788 17.8514 16.8708 17.9089 16.9624 17.9484C17.054 17.988 17.1526 18.0089 17.2523 18.01C17.3521 18.011 17.4511 17.9921 17.5435 17.9544C17.6358 17.9166 17.7198 17.8609 17.7903 17.7903C17.8609 17.7198 17.9166 17.6358 17.9544 17.5435C17.9921 17.4511 18.011 17.3521 18.01 17.2523C18.0089 17.1526 17.988 17.054 17.9484 16.9624C17.9089 16.8708 17.8514 16.788 17.7794 16.7189L13.3016 12.2411C14.361 10.9475 14.9993 9.29693 14.9993 7.49964C14.9993 3.36659 11.6327 0 7.49964 0ZM7.49964 1.49993C10.8221 1.49993 13.4993 4.17721 13.4993 7.49964C13.4993 10.8221 10.8221 13.4993 7.49964 13.4993C4.17721 13.4993 1.49993 10.8221 1.49993 7.49964C1.49993 4.17721 4.17721 1.49993 7.49964 1.49993Z" fill="currentColor"/>
+        </svg>
+        <input class="header__search-input search-input" type="text" placeholder="Поиск">
+    </div>
+    <div class="header__geolocation-block">
+        <svg width="2em" height="2em" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M15 7.25C15 8.68391 14.5601 10.0856 13.736 11.2779C12.9119 12.4701 11.7406 13.3994 10.3701 13.9481C8.99968 14.4969 7.49168 14.6404 6.03683 14.3607C4.58197 14.0809 3.2456 13.3905 2.1967 12.3765C1.14781 11.3626 0.433503 10.0708 0.144114 8.6644C-0.145275 7.25804 0.00324962 5.80031 0.570907 4.47554C1.13856 3.15078 2.09986 2.01849 3.33323 1.22185C4.5666 0.425205 6.01664 0 7.5 0V2.19C7.5 2.74229 7.05251 3.19 6.50022 3.19H5.97007C5.48959 3.19 5.1 3.57951 5.1 4.06V4.37471C5.1 4.68139 4.85139 4.93 4.54472 4.93C4.23804 4.93 3.98943 5.17861 3.98943 5.48529V5.655C3.98943 6.05541 4.31402 6.38 4.71443 6.38H7.12288C7.36594 6.38 7.60068 6.46852 7.78321 6.62902L8.14976 6.95133C8.36567 7.14118 8.48943 7.41479 8.48943 7.7023V8.28C8.48943 8.83228 8.93714 9.28 9.48943 9.28H9.87878C10.1887 9.28 10.481 9.42365 10.6704 9.66895L10.785 9.81739C11.1568 10.2991 11.869 10.3398 12.2933 9.90363L12.9 9.28L15 7.25ZM4.82161 9.12751L1.88943 6.96C1.88943 6.96 1.67677 8.09856 1.88942 8.98999C2.06799 9.73856 2.5521 10.2656 3.06993 10.8294C3.16875 10.937 3.2688 11.0459 3.36819 11.158C4.2764 12.1819 6.64291 12.6154 6.64291 12.6154L6.56733 11.7803C6.54581 11.5424 6.37574 11.3417 6.1388 11.2743L5.58042 11.1157C5.34348 11.0484 5.17341 10.8476 5.15189 10.6098L5.05486 9.53769C5.04017 9.37536 4.95551 9.2265 4.82161 9.12751ZM14.7894 2.98286C14.7894 4.64 12.6894 6.96 12.0894 6.96C11.4894 6.96 9.38943 4.64 9.38943 2.98286C9.38943 1.33547 10.5983 0 12.0894 0C13.5806 0 14.7894 1.32571 14.7894 2.98286ZM13.2894 2.93654C13.2894 3.57719 12.7522 4.09654 12.0894 4.09654C11.4267 4.09654 10.8894 3.57719 10.8894 2.93654C10.8894 2.29589 11.4267 1.77654 12.0894 1.77654C12.7522 1.77654 13.2894 2.29589 13.2894 2.93654Z" fill="currentColor"/>
+        </svg>
+        <div>Санкт-Петербург</div>
+    </div>
+    <button class="header__button button">Войти</button>
+</header>
+<div class="modal-background modal-background-inactive"></div>
+<div class="geolocation-modal-window modal-window modal-window-inactive">
+    <div class="geolocation-modal-window__header">
+        <svg class = "geolocation-modal-window__close-button close-button" width="1em" height="1em" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9706 11.9706C12.3611 11.58 12.3611 10.9469 11.9706 10.5563L7.72792 6.31371L11.9706 2.07107C12.3611 1.68054 12.3611 1.04738 11.9706 0.656853C11.58 0.266329 10.9469 0.266329 10.5563 0.656853L6.31371 4.8995L2.07107 0.656855C1.68054 0.266331 1.04738 0.266331 0.656853 0.656856C0.266329 1.04738 0.266328 1.68054 0.656852 2.07107L4.89949 6.31371L0.656853 10.5563C0.266329 10.9469 0.266329 11.58 0.656853 11.9706C1.04738 12.3611 1.68054 12.3611 2.07107 11.9706L6.31371 7.72792L10.5563 11.9706C10.9469 12.3611 11.58 12.3611 11.9706 11.9706Z" fill="currentColor"/>
+        </svg>
+        <h3 class="geolocation-modal-window__title">
+            Выберите город
+        </h3>
+        <div class="geolocation-modal-window__search">
+            <svg  class = "geolocation-modal-window__search-icon" width="1em" height="1em" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7 17C8.55556 17 14 11.3333 14 7.28571C14 3.2381 10.866 0 7 0C3.13401 0 0 3.26193 0 7.28571C0 11.3333 5.44444 17 7 17ZM7.09801 9.91667C8.81623 9.91667 10.2091 8.64814 10.2091 7.08333C10.2091 5.51853 8.81623 4.25 7.09801 4.25C5.37979 4.25 3.9869 5.51853 3.9869 7.08333C3.9869 8.64814 5.37979 9.91667 7.09801 9.91667Z" fill="currentColor"/>
+            </svg>
+
+            <input type="text" class="geolocation-modal-window__input search-input" value="Санкт-Петербург">
+        </div>
+
+    </div>
+    <div class="geolocation-modal-window__content-list select-list">
+        <ul>
+
+        </ul>
+    </div>
+</div>
+<div class="login-modal-window modal-window modal-window-inactive">
+    <div class="login-modal-window__header">
+        <svg class = "login-modal-window__close-button close-button" width="1em" height="1em" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9706 11.9706C12.3611 11.58 12.3611 10.9469 11.9706 10.5563L7.72792 6.31371L11.9706 2.07107C12.3611 1.68054 12.3611 1.04738 11.9706 0.656853C11.58 0.266329 10.9469 0.266329 10.5563 0.656853L6.31371 4.8995L2.07107 0.656855C1.68054 0.266331 1.04738 0.266331 0.656853 0.656856C0.266329 1.04738 0.266328 1.68054 0.656852 2.07107L4.89949 6.31371L0.656853 10.5563C0.266329 10.9469 0.266329 11.58 0.656853 11.9706C1.04738 12.3611 1.68054 12.3611 2.07107 11.9706L6.31371 7.72792L10.5563 11.9706C10.9469 12.3611 11.58 12.3611 11.9706 11.9706Z" fill="currentColor"/>
+        </svg>
+        <div class="login-modal-window__login-button login-button-active">Войти</div>
+        <div class="login-modal-window__register-button">Регистрация</div>
+    </div>
+    <div class="login-modal-window__main-content login-input-active">
+        <div class="login-modal-window__main-content-menu">
+            <input type="text" class="login-modal-window__main-content-menu-login-input login-input" placeholder="Email">
+            <input type="password" class="login-modal-window__main-content-menu-login-input login-input" placeholder="Пароль">
+        </div>
+        <div class="login-modal-window__main-content-menu">
+            <input type="text" class="login-modal-window__main-content-menu-register-input login-input" placeholder="Имя пользователя">
+            <input type="text" class="login-modal-window__main-content-menu-register-input login-input" placeholder="Email">
+            <input type="password" class="login-modal-window__main-content-menu-register-input login-input" placeholder="Пароль">
+            <input type="password" class="login-modal-window__main-content-menu-register-input login-input" placeholder="Повторите пароль">
+        </div>
+    </div>
+    <button class="login-modal-window__confirm-button button">Готово</button>
+</div>
+<main class = "main">
+    <section class="main__big-slider">
+        <svg  class  = "main__swiper-next-button slide-button" width="60" height="60" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.6464 9.64645C14.4512 9.84171 14.4512 10.1583 14.6464 10.3536L17.8284 13.5355C18.0237 13.7308 18.3403 13.7308 18.5355 13.5355C18.7308 13.3403 18.7308 13.0237 18.5355 12.8284L15.7071 10L18.5355 7.17157C18.7308 6.97631 18.7308 6.65973 18.5355 6.46447C18.3403 6.2692 18.0237 6.2692 17.8284 6.46447L14.6464 9.64645ZM15 10.5H15.5V9.5H15V10.5Z" fill="white"/>
+            <path d="M14.6464 9.64645C14.4512 9.84171 14.4512 10.1583 14.6464 10.3536L17.8284 13.5355C18.0237 13.7308 18.3403 13.7308 18.5355 13.5355C18.7308 13.3403 18.7308 13.0237 18.5355 12.8284L15.7071 10L18.5355 7.17157C18.7308 6.97631 18.7308 6.65973 18.5355 6.46447C18.3403 6.2692 18.0237 6.2692 17.8284 6.46447L14.6464 9.64645ZM15 10.5H15.5V9.5H15V10.5Z" fill="white"/>
+            <path d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z" fill="currentColor"/>
+            <path d="M12.3536 10.3536C12.5488 10.1583 12.5488 9.84171 12.3536 9.64645L9.17157 6.46447C8.97631 6.2692 8.65973 6.2692 8.46447 6.46447C8.2692 6.65973 8.2692 6.97631 8.46447 7.17157L11.2929 10L8.46447 12.8284C8.2692 13.0237 8.2692 13.3403 8.46447 13.5355C8.65973 13.7308 8.97631 13.7308 9.17157 13.5355L12.3536 10.3536ZM11.5 10.5H12V9.5H11.5V10.5Z" fill="white"/>
+            <path d="M12.3536 10.3536C12.5488 10.1583 12.5488 9.84171 12.3536 9.64645L9.17157 6.46447C8.97631 6.2692 8.65973 6.2692 8.46447 6.46447C8.2692 6.65973 8.2692 6.97631 8.46447 7.17157L11.2929 10L8.46447 12.8284C8.2692 13.0237 8.2692 13.3403 8.46447 13.5355C8.65973 13.7308 8.97631 13.7308 9.17157 13.5355L12.3536 10.3536ZM11.5 10.5H12V9.5H11.5V10.5Z" fill="white"/>
+        </svg>
+        <svg class = "main__swiper-prev-button slide-button" width="60" height="60" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 10C0 15.5228 4.47715 20 10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10Z" fill="currentColor"/>
+            <path d="M7.64645 10.3536C7.45118 10.1583 7.45118 9.84171 7.64645 9.64645L10.8284 6.46447C11.0237 6.2692 11.3403 6.2692 11.5355 6.46447C11.7308 6.65973 11.7308 6.97631 11.5355 7.17157L8.70711 10L11.5355 12.8284C11.7308 13.0237 11.7308 13.3403 11.5355 13.5355C11.3403 13.7308 11.0237 13.7308 10.8284 13.5355L7.64645 10.3536ZM8.5 10.5H8V9.5H8.5V10.5Z" fill="white"/>
+            <path d="M7.64645 10.3536C7.45118 10.1583 7.45118 9.84171 7.64645 9.64645L10.8284 6.46447C11.0237 6.2692 11.3403 6.2692 11.5355 6.46447C11.7308 6.65973 11.7308 6.97631 11.5355 7.17157L8.70711 10L11.5355 12.8284C11.7308 13.0237 11.7308 13.3403 11.5355 13.5355C11.3403 13.7308 11.0237 13.7308 10.8284 13.5355L7.64645 10.3536ZM8.5 10.5H8V9.5H8.5V10.5Z" fill="white"/>
+        </svg>
+        <div class="main__big-swiper swiper">
+            <div class="main__big-swiper-wrapper swiper-wrapper">
+            </div>
+            <div class="main__big-swiper-pagination swiper-pagination"></div>
+        </div>
+    </section>
+    <section class="main__normal-slider">
+        <div class="main__normal-slider-header">
+            <div class="main__normal-slider-header-content">
+            <h4 class="main__normal-slider-title">Избранное</h4>
+            <a href="http://www.google.com">
+                <div class="main__normal-slider-redirect redirect-button">Все</div>
+            </a>
+            </div>
+            <div class="main__normal-slider-buttons">
+        <svg class="main__normal-swiper-prev-button normal-swiper-button" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15" cy="15" r="14.5" fill="currentColor" stroke="black"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7784 8.70711C17.3879 8.31658 16.7547 8.31658 16.3642 8.70711L10.7073 14.364C10.3168 14.7545 10.3168 15.3877 10.7073 15.7782L16.3642 21.435C16.7547 21.8256 17.3879 21.8256 17.7784 21.435C18.1689 21.0445 18.1689 20.4113 17.7784 20.0208L12.8286 15.0711L17.7784 10.1213C18.1689 9.7308 18.1689 9.09763 17.7784 8.70711Z" fill="black"/>
+        </svg>
+        <svg class="main__normal-swiper-next-button normal-swiper-button" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15" cy="15" r="14.5" transform="matrix(-1 0 0 1 30 0)" fill="currentColor" stroke="black"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2216 8.70711C12.6121 8.31658 13.2453 8.31658 13.6358 8.70711L19.2927 14.364C19.6832 14.7545 19.6832 15.3877 19.2927 15.7782L13.6358 21.435C13.2453 21.8256 12.6121 21.8256 12.2216 21.435C11.8311 21.0445 11.8311 20.4113 12.2216 20.0208L17.1714 15.0711L12.2216 10.1213C11.8311 9.7308 11.8311 9.09763 12.2216 8.70711Z" fill="black"/>
+        </svg>
+            </div>
+        </div>
+        <div class="main__first-normal-swiper swiper">
+            <div class="main__normal-swiper-wrapper swiper-wrapper">
+            </div>
+        </div>
+    </section>
+    <section class="main__normal-slider">
+        <div class="main__normal-slider-header">
+            <div class="main__normal-slider-header-content">
+                <h4 class="main__normal-slider-title">Комедии</h4>
+                <a href="http://www.google.com">
+                    <div class="main__normal-slider-redirect redirect-button">Все</div>
+                </a>
+            </div>
+            <div class="main__normal-slider-buttons">
+                <svg class="main__second-normal-swiper-prev-button normal-swiper-button" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="15" cy="15" r="14.5" fill="currentColor" stroke="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7784 8.70711C17.3879 8.31658 16.7547 8.31658 16.3642 8.70711L10.7073 14.364C10.3168 14.7545 10.3168 15.3877 10.7073 15.7782L16.3642 21.435C16.7547 21.8256 17.3879 21.8256 17.7784 21.435C18.1689 21.0445 18.1689 20.4113 17.7784 20.0208L12.8286 15.0711L17.7784 10.1213C18.1689 9.7308 18.1689 9.09763 17.7784 8.70711Z" fill="black"/>
+                </svg>
+                <svg class="main__second-normal-swiper-next-button normal-swiper-button" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="15" cy="15" r="14.5" transform="matrix(-1 0 0 1 30 0)" fill="currentColor" stroke="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2216 8.70711C12.6121 8.31658 13.2453 8.31658 13.6358 8.70711L19.2927 14.364C19.6832 14.7545 19.6832 15.3877 19.2927 15.7782L13.6358 21.435C13.2453 21.8256 12.6121 21.8256 12.2216 21.435C11.8311 21.0445 11.8311 20.4113 12.2216 20.0208L17.1714 15.0711L12.2216 10.1213C11.8311 9.7308 11.8311 9.09763 12.2216 8.70711Z" fill="black"/>
+                </svg>
+            </div>
+        </div>
+        <div class="main__second-normal-swiper swiper">
+            <div class="main__second-normal-swiper-wrapper swiper-wrapper">
+            </div>
+        </div>
+    </section>
+    <section class="main__normal-slider">
+        <div class="main__normal-slider-header">
+            <div class="main__normal-slider-header-content">
+                <h4 class="main__normal-slider-title">Фантастика</h4>
+                <a href="http://www.google.com">
+                    <div class="main__normal-slider-redirect redirect-button">Все</div>
+                </a>
+            </div>
+            <div class="main__normal-slider-buttons">
+                <svg class="main__third-normal-swiper-prev-button normal-swiper-button" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="15" cy="15" r="14.5" fill="currentColor" stroke="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7784 8.70711C17.3879 8.31658 16.7547 8.31658 16.3642 8.70711L10.7073 14.364C10.3168 14.7545 10.3168 15.3877 10.7073 15.7782L16.3642 21.435C16.7547 21.8256 17.3879 21.8256 17.7784 21.435C18.1689 21.0445 18.1689 20.4113 17.7784 20.0208L12.8286 15.0711L17.7784 10.1213C18.1689 9.7308 18.1689 9.09763 17.7784 8.70711Z" fill="black"/>
+                </svg>
+                <svg class="main__third-normal-swiper-next-button normal-swiper-button" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="15" cy="15" r="14.5" transform="matrix(-1 0 0 1 30 0)" fill="currentColor" stroke="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2216 8.70711C12.6121 8.31658 13.2453 8.31658 13.6358 8.70711L19.2927 14.364C19.6832 14.7545 19.6832 15.3877 19.2927 15.7782L13.6358 21.435C13.2453 21.8256 12.6121 21.8256 12.2216 21.435C11.8311 21.0445 11.8311 20.4113 12.2216 20.0208L17.1714 15.0711L12.2216 10.1213C11.8311 9.7308 11.8311 9.09763 12.2216 8.70711Z" fill="black"/>
+                </svg>
+            </div>
+        </div>
+        <div class="main__third-normal-swiper swiper">
+            <div class="main__third-normal-swiper-wrapper swiper-wrapper">
+            </div>
+        </div>
+    </section>
+    <section class="main__collection">
+        <div class="main__collection-header">
+            <h4 class="main__collection-title">Подборки</h4>
+            <a href="http://www.google.com">
+                <div class="main__collection-redirect-button  redirect-button">Все</div>
+            </a>
+        </div>
+        <div class="main__collection-redirect-block-container">
+
+        </div>
+    </section>
+</main>
+<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script defer src="../static/JS/Reviewer-main.js"></script>
+</body>
+</html>
