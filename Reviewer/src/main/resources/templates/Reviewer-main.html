@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Reviewer</title>
     <link rel="stylesheet"  href = "../static/CSS/Reviewer-main-style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
 <header class="header">
@@ -73,9 +74,111 @@
     </div>
     <button class="login-modal-window__confirm-button button">Готово</button>
 </div>
-<main>
+<main class = "main">
+    <section class="main__big-slider">
+        <svg  class  = "main__swiper-next-button slide-button" width="60" height="60" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.6464 9.64645C14.4512 9.84171 14.4512 10.1583 14.6464 10.3536L17.8284 13.5355C18.0237 13.7308 18.3403 13.7308 18.5355 13.5355C18.7308 13.3403 18.7308 13.0237 18.5355 12.8284L15.7071 10L18.5355 7.17157C18.7308 6.97631 18.7308 6.65973 18.5355 6.46447C18.3403 6.2692 18.0237 6.2692 17.8284 6.46447L14.6464 9.64645ZM15 10.5H15.5V9.5H15V10.5Z" fill="white"/>
+            <path d="M14.6464 9.64645C14.4512 9.84171 14.4512 10.1583 14.6464 10.3536L17.8284 13.5355C18.0237 13.7308 18.3403 13.7308 18.5355 13.5355C18.7308 13.3403 18.7308 13.0237 18.5355 12.8284L15.7071 10L18.5355 7.17157C18.7308 6.97631 18.7308 6.65973 18.5355 6.46447C18.3403 6.2692 18.0237 6.2692 17.8284 6.46447L14.6464 9.64645ZM15 10.5H15.5V9.5H15V10.5Z" fill="white"/>
+            <path d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z" fill="currentColor"/>
+            <path d="M12.3536 10.3536C12.5488 10.1583 12.5488 9.84171 12.3536 9.64645L9.17157 6.46447C8.97631 6.2692 8.65973 6.2692 8.46447 6.46447C8.2692 6.65973 8.2692 6.97631 8.46447 7.17157L11.2929 10L8.46447 12.8284C8.2692 13.0237 8.2692 13.3403 8.46447 13.5355C8.65973 13.7308 8.97631 13.7308 9.17157 13.5355L12.3536 10.3536ZM11.5 10.5H12V9.5H11.5V10.5Z" fill="white"/>
+            <path d="M12.3536 10.3536C12.5488 10.1583 12.5488 9.84171 12.3536 9.64645L9.17157 6.46447C8.97631 6.2692 8.65973 6.2692 8.46447 6.46447C8.2692 6.65973 8.2692 6.97631 8.46447 7.17157L11.2929 10L8.46447 12.8284C8.2692 13.0237 8.2692 13.3403 8.46447 13.5355C8.65973 13.7308 8.97631 13.7308 9.17157 13.5355L12.3536 10.3536ZM11.5 10.5H12V9.5H11.5V10.5Z" fill="white"/>
+        </svg>
+        <svg class = "main__swiper-prev-button slide-button" width="60" height="60" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 10C0 15.5228 4.47715 20 10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10Z" fill="currentColor"/>
+            <path d="M7.64645 10.3536C7.45118 10.1583 7.45118 9.84171 7.64645 9.64645L10.8284 6.46447C11.0237 6.2692 11.3403 6.2692 11.5355 6.46447C11.7308 6.65973 11.7308 6.97631 11.5355 7.17157L8.70711 10L11.5355 12.8284C11.7308 13.0237 11.7308 13.3403 11.5355 13.5355C11.3403 13.7308 11.0237 13.7308 10.8284 13.5355L7.64645 10.3536ZM8.5 10.5H8V9.5H8.5V10.5Z" fill="white"/>
+            <path d="M7.64645 10.3536C7.45118 10.1583 7.45118 9.84171 7.64645 9.64645L10.8284 6.46447C11.0237 6.2692 11.3403 6.2692 11.5355 6.46447C11.7308 6.65973 11.7308 6.97631 11.5355 7.17157L8.70711 10L11.5355 12.8284C11.7308 13.0237 11.7308 13.3403 11.5355 13.5355C11.3403 13.7308 11.0237 13.7308 10.8284 13.5355L7.64645 10.3536ZM8.5 10.5H8V9.5H8.5V10.5Z" fill="white"/>
+        </svg>
+        <div class="main__big-swiper swiper">
+            <div class="main__big-swiper-wrapper swiper-wrapper">
+            </div>
+            <div class="main__big-swiper-pagination swiper-pagination"></div>
+        </div>
+    </section>
+    <section class="main__normal-slider">
+        <div class="main__normal-slider-header">
+            <div class="main__normal-slider-header-content">
+            <h4 class="main__normal-slider-title">Избранное</h4>
+            <a href="http://www.google.com">
+                <div class="main__normal-slider-redirect redirect-button">Все</div>
+            </a>
+            </div>
+            <div class="main__normal-slider-buttons">
+        <svg class="main__normal-swiper-prev-button normal-swiper-button" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15" cy="15" r="14.5" fill="currentColor" stroke="black"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7784 8.70711C17.3879 8.31658 16.7547 8.31658 16.3642 8.70711L10.7073 14.364C10.3168 14.7545 10.3168 15.3877 10.7073 15.7782L16.3642 21.435C16.7547 21.8256 17.3879 21.8256 17.7784 21.435C18.1689 21.0445 18.1689 20.4113 17.7784 20.0208L12.8286 15.0711L17.7784 10.1213C18.1689 9.7308 18.1689 9.09763 17.7784 8.70711Z" fill="black"/>
+        </svg>
+        <svg class="main__normal-swiper-next-button normal-swiper-button" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15" cy="15" r="14.5" transform="matrix(-1 0 0 1 30 0)" fill="currentColor" stroke="black"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2216 8.70711C12.6121 8.31658 13.2453 8.31658 13.6358 8.70711L19.2927 14.364C19.6832 14.7545 19.6832 15.3877 19.2927 15.7782L13.6358 21.435C13.2453 21.8256 12.6121 21.8256 12.2216 21.435C11.8311 21.0445 11.8311 20.4113 12.2216 20.0208L17.1714 15.0711L12.2216 10.1213C11.8311 9.7308 11.8311 9.09763 12.2216 8.70711Z" fill="black"/>
+        </svg>
+            </div>
+        </div>
+        <div class="main__first-normal-swiper swiper">
+            <div class="main__normal-swiper-wrapper swiper-wrapper">
+            </div>
+        </div>
+    </section>
+    <section class="main__normal-slider">
+        <div class="main__normal-slider-header">
+            <div class="main__normal-slider-header-content">
+                <h4 class="main__normal-slider-title">Комедии</h4>
+                <a href="http://www.google.com">
+                    <div class="main__normal-slider-redirect redirect-button">Все</div>
+                </a>
+            </div>
+            <div class="main__normal-slider-buttons">
+                <svg class="main__second-normal-swiper-prev-button normal-swiper-button" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="15" cy="15" r="14.5" fill="currentColor" stroke="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7784 8.70711C17.3879 8.31658 16.7547 8.31658 16.3642 8.70711L10.7073 14.364C10.3168 14.7545 10.3168 15.3877 10.7073 15.7782L16.3642 21.435C16.7547 21.8256 17.3879 21.8256 17.7784 21.435C18.1689 21.0445 18.1689 20.4113 17.7784 20.0208L12.8286 15.0711L17.7784 10.1213C18.1689 9.7308 18.1689 9.09763 17.7784 8.70711Z" fill="black"/>
+                </svg>
+                <svg class="main__second-normal-swiper-next-button normal-swiper-button" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="15" cy="15" r="14.5" transform="matrix(-1 0 0 1 30 0)" fill="currentColor" stroke="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2216 8.70711C12.6121 8.31658 13.2453 8.31658 13.6358 8.70711L19.2927 14.364C19.6832 14.7545 19.6832 15.3877 19.2927 15.7782L13.6358 21.435C13.2453 21.8256 12.6121 21.8256 12.2216 21.435C11.8311 21.0445 11.8311 20.4113 12.2216 20.0208L17.1714 15.0711L12.2216 10.1213C11.8311 9.7308 11.8311 9.09763 12.2216 8.70711Z" fill="black"/>
+                </svg>
+            </div>
+        </div>
+        <div class="main__second-normal-swiper swiper">
+            <div class="main__second-normal-swiper-wrapper swiper-wrapper">
+            </div>
+        </div>
+    </section>
+    <section class="main__normal-slider">
+        <div class="main__normal-slider-header">
+            <div class="main__normal-slider-header-content">
+                <h4 class="main__normal-slider-title">Фантастика</h4>
+                <a href="http://www.google.com">
+                    <div class="main__normal-slider-redirect redirect-button">Все</div>
+                </a>
+            </div>
+            <div class="main__normal-slider-buttons">
+                <svg class="main__third-normal-swiper-prev-button normal-swiper-button" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="15" cy="15" r="14.5" fill="currentColor" stroke="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7784 8.70711C17.3879 8.31658 16.7547 8.31658 16.3642 8.70711L10.7073 14.364C10.3168 14.7545 10.3168 15.3877 10.7073 15.7782L16.3642 21.435C16.7547 21.8256 17.3879 21.8256 17.7784 21.435C18.1689 21.0445 18.1689 20.4113 17.7784 20.0208L12.8286 15.0711L17.7784 10.1213C18.1689 9.7308 18.1689 9.09763 17.7784 8.70711Z" fill="black"/>
+                </svg>
+                <svg class="main__third-normal-swiper-next-button normal-swiper-button" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="15" cy="15" r="14.5" transform="matrix(-1 0 0 1 30 0)" fill="currentColor" stroke="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2216 8.70711C12.6121 8.31658 13.2453 8.31658 13.6358 8.70711L19.2927 14.364C19.6832 14.7545 19.6832 15.3877 19.2927 15.7782L13.6358 21.435C13.2453 21.8256 12.6121 21.8256 12.2216 21.435C11.8311 21.0445 11.8311 20.4113 12.2216 20.0208L17.1714 15.0711L12.2216 10.1213C11.8311 9.7308 11.8311 9.09763 12.2216 8.70711Z" fill="black"/>
+                </svg>
+            </div>
+        </div>
+        <div class="main__third-normal-swiper swiper">
+            <div class="main__third-normal-swiper-wrapper swiper-wrapper">
+            </div>
+        </div>
+    </section>
+    <section class="main__collection">
+        <div class="main__collection-header">
+            <h4 class="main__collection-title">Подборки</h4>
+            <a href="http://www.google.com">
+                <div class="main__collection-redirect-button  redirect-button">Все</div>
+            </a>
+        </div>
+        <div class="main__collection-redirect-block-container">
 
+        </div>
+    </section>
 </main>
+<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script defer src="../static/JS/Reviewer-main.js"></script>
 </body>
 </html>

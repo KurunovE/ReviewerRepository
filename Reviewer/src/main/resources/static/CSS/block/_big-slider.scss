@@ -1,0 +1,36 @@
+.main{
+  &__big-slider{
+    position: relative;
+  }
+  &__swiper-next-button{
+    @include big-slider-button;
+    right: -30px;
+    z-index: var(--z-index-big-slider-button);
+  }
+  &__swiper-prev-button{
+    @include big-slider-button;
+    left:-30px;
+    z-index: var(--z-index-big-slider-button);
+  }
+}
+.main__big-slider{
+  margin: 150px var(--main-margin-left-right-sides) 0;
+  max-width: 855px;
+  max-height: 318px;
+
+}
+.main__big-swiper {
+  width: 855px;
+  height: 318px;
+}
+.swiper-slide {
+  &:hover{
+    filter: brightness(80%);
+    transition: .5s;
+  }
+}
+.image-slide{
+  height:100%;
+  width: 585px;
+  border-radius: 20px;
+}
