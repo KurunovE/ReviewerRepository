@@ -1,0 +1,15 @@
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  width: 650px;
+  align-items: center;
+  box-shadow: 0 0 10px black;
+  min-height: 100vh;
+}
+.content-active{
+  display: flex;
+}
+.content-inactive{
+  display: none;
+}

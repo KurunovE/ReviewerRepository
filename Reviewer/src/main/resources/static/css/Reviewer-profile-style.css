@@ -91,6 +91,8 @@ body {
   --main-color-whiteGray: rgb(220, 220, 220);
   --main-color-lightGray: rgb(240, 240, 240);
   --main-color-DarkGray: rgb(160, 160, 160);
+  --main-color-backgroundGray: rgb(128,128,128);
+  --main-color-backgroundDarkGray: rgb(110,110,110);
   --z-index-modal-window:100;
   --z-index-modal-background:90;
   --z-index-modal-header:110;
@@ -111,6 +113,122 @@ body {
 body {
   font-family: Inter, sans-serif;
   background-image: url(".././background/image_2025-04-17_21-54-53.png");
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  width: 650px;
+  align-items: center;
+  box-shadow: 0 0 10px black;
+  min-height: 100vh;
+}
+
+.content-active {
+  display: flex;
+}
+
+.content-inactive {
+  display: none;
+}
+
+.main__header {
+  display: flex;
+  width: 100%;
+  padding: 25px 75px 0;
+  font-size: 1.25rem;
+  gap: 15px;
+  color: var(--main-font-color);
+}
+
+.header-redirect {
+  transition: 0.5s;
+  cursor: pointer;
+}
+.header-redirect:hover {
+  color: black;
+}
+
+.current-page {
+  transform: translateY(-5px);
+  font-size: 1.5rem;
+  color: black;
+}
+
+.main__head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.75rem;
+}
+.main__head-avatar {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 100px;
+  margin: 40px 0 20px;
+}
+.main__head-username {
+  font-weight: bold;
+  color: var(--main-font-dark-color);
+}
+.main__head-email {
+  color: var(--main-font-color);
+}
+
+.main__profile-content {
+  flex-direction: column;
+  width: 100%;
+  padding: 0 140px;
+}
+.main__profile-content-inputs {
+  display: flex;
+  flex-direction: column;
+}
+.main__profile-content-input {
+  padding: 10px 0;
+}
+.main__profile-content-label {
+  margin: 10px 0 5px;
+  text-indent: 15px;
+}
+.main__profile-content-save-button {
+  margin: 25px auto;
+}
+
+.input {
+  border: 2px solid var(--main-color-Gray);
+  font-size: 1rem;
+  color: var(--main-font-color);
+  border-radius: 15px;
+}
+.input:focus {
+  border-color: var(--main-font-color);
+}
+
+.input-label {
+  font-weight: bold;
+  color: var(--main-font-color);
+  font-size: 1.1rem;
+}
+.input-label span {
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.button {
+  background-color: var(--main-color-backgroundGray);
+  color: white;
+  border: 2px solid var(--main-color-backgroundGray);
+  border-radius: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: bold;
+}
+.button:hover {
+  background-color: var(--main-color-backgroundDarkGray);
+  border-color: var(--main-color-backgroundDarkGray);
 }
 
 /*# sourceMappingURL=Reviewer-profile-style.css.map */

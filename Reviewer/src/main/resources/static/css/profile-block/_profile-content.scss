@@ -1,0 +1,52 @@
+.main__profile-content{
+  flex-direction: column;
+  width: 100%;
+  padding: 0 140px;
+  &-inputs{
+    display: flex;
+    flex-direction: column;
+  }
+  &-input{
+    padding: 10px 0;
+  }
+  &-label{
+    margin: 10px 0 5px;
+    text-indent: 15px;
+  }
+  &-save-button{
+    margin: 25px auto;
+  }
+}
+.input{
+  border: 2px solid var(--main-color-Gray);
+  font-size: 1rem;
+  color: var(--main-font-color);
+  border-radius: 15px;
+  &:focus{
+    border-color: var(--main-font-color);
+  }
+}
+.input-label{
+  font-weight: bold;
+  color: var(--main-font-color);
+  font-size: 1.1rem;
+  span {
+    font-weight: normal;
+    font-size: 1rem;
+  }
+}
+.button{
+  background-color: var(--main-color-backgroundGray);
+  color: white;
+  border: 2px solid var(--main-color-backgroundGray);
+  border-radius: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: bold;
+
+  &:hover{
+    background-color: var(--main-color-backgroundDarkGray);
+    border-color: var(--main-color-backgroundDarkGray);
+  }
+}
