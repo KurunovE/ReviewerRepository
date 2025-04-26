@@ -1,0 +1,9 @@
+const avatar = document.querySelector(".main__head-avatar");
+const username = document.querySelector(".main__head-username");
+const email = document.querySelector(".main__head-email");
+const currentAvatar = "avatar1.png"
+const currentUsername = "Vasserman2004";
+const currentEmail = "vass2004@gmail.com";
+username.textContent = currentUsername;
+email.textContent = currentEmail;
+avatar.src = `/static/avatar/${currentAvatar}`;
