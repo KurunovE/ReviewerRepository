@@ -3,12 +3,26 @@
     position: relative;
   }
   &__swiper-next-button{
-    @include big-slider-button;
+    position: absolute;
+    top: calc(50% - 30px);
+    transition: .5s;
+    cursor: pointer;
+    &:hover{
+      transform: scale(1.2);
+      color: var(--main-font-dark-color);
+    }
     right: -30px;
     z-index: var(--z-index-big-slider-button);
   }
   &__swiper-prev-button{
-    @include big-slider-button;
+    position: absolute;
+    top: calc(50% - 30px);
+    transition: .5s;
+    cursor: pointer;
+    &:hover{
+      transform: scale(1.2);
+      color: var(--main-font-dark-color);
+    }
     left:-30px;
     z-index: var(--z-index-big-slider-button);
   }

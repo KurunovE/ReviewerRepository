@@ -91,6 +91,8 @@ body {
   --main-color-whiteGray: rgb(220, 220, 220);
   --main-color-lightGray: rgb(240, 240, 240);
   --main-color-DarkGray: rgb(160, 160, 160);
+  --main-color-backgroundGray: rgb(128,128,128);
+  --main-color-backgroundDarkGray: rgb(110,110,110);
   --z-index-modal-window:100;
   --z-index-modal-background:90;
   --z-index-modal-header:110;
@@ -119,9 +121,8 @@ body {
 
 .header {
   display: flex;
+  justify-self: center;
   justify-content: space-between;
-  position: fixed;
-  top: 0;
   z-index: var(--z-index-header);
   background-color: white;
   width: 1040px;
@@ -138,7 +139,7 @@ body {
   }
 }
 .header a:hover {
-  color: black;
+  color: var(--main-font-dark-color);
 }
 
 .header__site-name {
@@ -414,7 +415,6 @@ body {
 .main__swiper-next-button {
   position: absolute;
   top: calc(50% - 30px);
-  z-index: var(--z-index-slider-button);
   transition: 0.5s;
   cursor: pointer;
   right: -30px;
@@ -427,7 +427,6 @@ body {
 .main__swiper-prev-button {
   position: absolute;
   top: calc(50% - 30px);
-  z-index: var(--z-index-slider-button);
   transition: 0.5s;
   cursor: pointer;
   left: -30px;

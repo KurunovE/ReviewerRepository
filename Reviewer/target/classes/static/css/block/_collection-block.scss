@@ -5,7 +5,10 @@
     margin: var(--main-margin-top) var(--main-margin-left-right-sides) 0;
 
     &-header{
-      @include main-block-header;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin:  0 0 10px 20px;
     }
     &-title{
       font-size: 1.5rem;

@@ -59,9 +59,23 @@
         background-color: var(--main-color-Gray);
       }
     }
+}
+.long-description{
+  @media (max-width: 1040px){
+  width:100vw;
+}
+  @media (max-width: 800px){
+    width: 800px;
+  }
+  width: 1040px;
+  padding: 0 77px 77px;
+  color: var(--main-font-color);
 
-
-
-
-
+  &__title{
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  &__content{
+    max-width: 850px;
+  }
 }

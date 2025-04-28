@@ -9,7 +9,14 @@
   display: none;
 }
 .modal-window{
-  @include modal-window(20rem,25rem);
+  position: fixed;
+  z-index: var(--z-index-modal-window);
+  width: 20rem;
+  height: 25rem;
+  left: calc(50% - 20rem/2);
+  top: calc(50% - 25rem/2);
+  background-color: white;
+  transition: .3s;
   color: var(--main-font-color)
 }
 .modal-window-active{
@@ -19,12 +26,14 @@
   transform: scale(0);
 }
 .geolocation-modal-window{
-  @include flex-column;
+  display: flex;
+  flex-direction: column;
   border-radius: 20px 20px 0 20px;
   overflow: hidden;
   &__header{
     z-index: var(--z-index-modal-header);
-    @include flex-column;
+    display: flex;
+    flex-direction: column;
     border-bottom: 1px solid var(--main-color-whiteGray);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
@@ -89,7 +98,14 @@
   }
 }
 .login-modal-window{
-  @include modal-window(24rem,20rem);
+  position: fixed;
+  z-index: var(--z-index-modal-window);
+  width: 24rem;
+  height: 20rem;
+  left: calc(50% - 24rem/2);
+  top: calc(50% - 20rem/2);
+  background-color: white;
+  transition: .3s;
   border-radius: 20px;
   overflow: hidden;
 
@@ -121,7 +137,8 @@
       justify-content: center;
       flex:1 50%;
       gap: 20px;
-      @include flex-column;
+      display: flex;
+      flex-direction: column;
 
       &-login-input{
         margin: 10px 50px;

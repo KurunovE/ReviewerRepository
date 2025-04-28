@@ -3,9 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Reviewer</title>
-    <link rel="stylesheet" href = "/css/Reviewer-profile-style.css" type = "text/css">
+    <link rel="stylesheet" href = "/static/css/Reviewer-profile-style.css">
 </head>
 <body>
-
+<main class="main">
+    <div class = "main__header">
+        <a href = "/home" class="main__header-main-redirect header-redirect">Главная</a>
+        <div class="main__header-settings-redirect header-redirect settings-redirect">Настройки</div>
+        <div class="main__header-profile header-redirect current-page profile-redirect">Профиль</div>
+    </div>
+    <div class="main__head">
+        <img src="" alt="" class="main__head-avatar">
+        <h4 class="main__head-username">adad</h4>
+        <p class="main__head-email">dsad</p>
+    </div>
+    <div class="main__profile-content content-active profile-content">
+        <form action="" class="main__profile-content-inputs">
+        <label for="surname" class="main__profile-content-label input-label">Фамилия</label>
+        <input type="text" id="surname" class="main__profile-content-input input" placeholder="...">
+        <label for="name" class="main__profile-content-label input-label">Имя</label>
+        <input type="text" id="name" class="main__profile-content-input input" placeholder="...">
+        <label for="patronymic" class="main__profile-content-label input-label">Отчество <span>(при наличии)</span></label>
+        <input type="text" id="patronymic" class="main__profile-content-input input" placeholder="...">
+            <button class="main__profile-content-save-button button profile-info">Сохранить</button>
+        </form>
+    </div>
+    <div class="main__profile-content content-inactive settings-content">
+    <form action="" class="main__profile-content-inputs">
+        <label for="password" class="main__profile-content-label input-label">Новый пароль</label>
+        <input type="password" id="password" class="main__profile-content-input input" placeholder="...">
+        <label for="repeat-password" class="main__profile-content-label input-label">Повторите пароль</label>
+        <input type="password" id="repeat-password" class="main__profile-content-input input" placeholder="...">
+        <button class="main__profile-content-save-button button settings">Сохранить</button>
+    </form>
+    </div>
+</main>
+<script defer src="/static/js/Reviewer-profile.js"></script>
 </body>
 </html>
