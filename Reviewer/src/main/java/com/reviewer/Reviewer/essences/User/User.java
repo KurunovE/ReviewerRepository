@@ -4,8 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
+import java.util.HashSet;
 import java.util.Objects;
 
 
@@ -18,7 +17,8 @@ public class User {
     private String username;
     private String email;
     private String password;
-    private LocalDate birthday;
+    private String firstName;
+    private String lastName;
 
     public User(final String username,
                 final String email,
@@ -26,20 +26,6 @@ public class User {
         this.username = username;
         this.email = email;
         this.password = password;
-    }
-
-    public User(final String username,
-                final String email,
-                final String password,
-                final LocalDate birthday) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.birthday = birthday;
-    }
-
-    public int getAge() {
-        return (int) ChronoUnit.YEARS.between(birthday, LocalDate.now());
     }
 
     @Override
@@ -53,7 +39,7 @@ public class User {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, username, email, password, birthday);
+        return Objects.hash(id, username, email, password);
     }
 
     public String toString() {
@@ -61,8 +47,6 @@ public class User {
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
-                ", birthday='" + birthday + '\'' +
-                ", age='" + getAge() + '\'' +
                 '}';
     }
 }
