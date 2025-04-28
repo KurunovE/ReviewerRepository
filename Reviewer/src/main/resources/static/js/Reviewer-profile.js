@@ -5,7 +5,9 @@ const profileButton = document.querySelector(".profile-redirect");
 const settingsButton = document.querySelector(".settings-redirect");
 const profileContent = document.querySelector(".profile-content");
 const settingsContent = document.querySelector(".settings-content");
-
+const currentAvatar = "profile2.jpg"
+const currentUsername = "Vasserman2004";
+const currentEmail = "vass2004@gmail.com";
 profileButton.addEventListener("click", ()=>{
     settingsButton.classList.remove("current-page");
     profileButton.classList.add("current-page");
@@ -24,9 +26,6 @@ settingsButton.addEventListener("click", ()=>{
     settingsContent.classList.add("content-active");
 
 })
-const currentAvatar = "profile2.jpg"
-const currentUsername = "Vasserman2004";
-const currentEmail = "vass2004@gmail.com";
 username.textContent = currentUsername;
 email.textContent = currentEmail;
 avatar.src = `/static/avatar/${currentAvatar}`;

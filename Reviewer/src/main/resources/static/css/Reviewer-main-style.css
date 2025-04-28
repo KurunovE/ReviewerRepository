@@ -1,10 +1,10 @@
 /* Error: Undefined mixin.
- *   ,
- * 2 |   @include flex-space-between;
- *   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   block\_header.scss 2:3        @use
- *   Reviewer-main-style.scss 6:1  root stylesheet */
+ *    ,
+ * 12 |   @include modal-window(20rem,25rem);
+ *    |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   block\_modal-windows.scss 12:3  @use
+ *   Reviewer-main-style.scss 7:1    root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a   \2577 \a 2 \2502    @include flex-space-between;\d\a   \2502    ^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   block\\_header.scss 2:3        @use\a   Reviewer-main-style.scss 6:1  root stylesheet";
+  content: "Error: Undefined mixin.\a    \2577 \a 12 \2502    @include modal-window(20rem,25rem);\d\a    \2502    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   block\\_modal-windows.scss 12:3  @use\a   Reviewer-main-style.scss 7:1    root stylesheet";
 }

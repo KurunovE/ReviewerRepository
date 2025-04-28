@@ -1,7 +1,7 @@
   .header{
-  @include flex-space-between;
-  position: fixed;
-  top: 0;
+  display: flex;
+  justify-self: center;
+  justify-content: space-between;
   z-index: var(--z-index-header);
   background-color: white;
   @media (max-width: 1040px) {
