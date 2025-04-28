@@ -1,0 +1,22 @@
+.main__header{
+  display: flex;
+  width: 100%;
+  padding:  25px 75px 0;
+  font-size: 1.25rem;
+  gap: 15px;
+  color: var(--main-font-color);
+}
+.header-redirect{
+
+  transition: .5s;
+  cursor: pointer;
+
+  &:hover{
+    color: black;
+  }
+}
+.current-page{
+  transform: translateY(-5px);
+  font-size: 1.5rem;
+  color: black;
+}
