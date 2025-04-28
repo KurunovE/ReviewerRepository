@@ -1,0 +1,43 @@
+.main-content{
+  @media (max-width: 1040px){
+    width:100vw;
+  }
+  @media (max-width: 800px){
+    width: 800px;
+  }
+  width: 900px;
+  font-size: 1.25rem;
+  color: var(--main-font-color);
+  display: grid;
+  gap: 20px 20px;
+  margin: 0 77px 200px;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: 60px 1fr 60px 60px 60px;
+  grid-template-areas:"director-title director first-img second-img"
+                       "starring-title starring first-img second-img"
+                          "durration-title durration third-img third-img"
+                           "country-title country third-img third-img"
+                            "release-title release third-img third-img";
+
+  &__first-img{
+    grid-area: first-img;
+  }
+  &__second-img{
+    grid-area: second-img;
+  }
+  &__third-img{
+    grid-area: third-img;
+  }
+}
+.small-img{
+  max-height: 230px;
+  min-width: 100%;
+}
+.long-img{
+  max-height: 230px;
+  min-width: 100%;
+}
+.main-title{
+  font-weight: bold;
+}
+

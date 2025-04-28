@@ -113,6 +113,7 @@ body {
 body {
   font-family: Inter, sans-serif;
   background-image: url(".././background/image_2025-04-17_21-54-53.png");
+  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.75);
 }
 
 .main {

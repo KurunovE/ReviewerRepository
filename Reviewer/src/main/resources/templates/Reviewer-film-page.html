@@ -6,8 +6,55 @@
     <title>Reviewer</title> <!-- Сделать динамическую смену названия в зависимости от названия фильма-->
 </head>
 <body>
+<div class="modal-background modal-background-inactive"></div>
+<div class="geolocation-modal-window modal-window modal-window-inactive">
+    <div class="geolocation-modal-window__header">
+        <svg class = "geolocation-modal-window__close-button close-button" width="1em" height="1em" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9706 11.9706C12.3611 11.58 12.3611 10.9469 11.9706 10.5563L7.72792 6.31371L11.9706 2.07107C12.3611 1.68054 12.3611 1.04738 11.9706 0.656853C11.58 0.266329 10.9469 0.266329 10.5563 0.656853L6.31371 4.8995L2.07107 0.656855C1.68054 0.266331 1.04738 0.266331 0.656853 0.656856C0.266329 1.04738 0.266328 1.68054 0.656852 2.07107L4.89949 6.31371L0.656853 10.5563C0.266329 10.9469 0.266329 11.58 0.656853 11.9706C1.04738 12.3611 1.68054 12.3611 2.07107 11.9706L6.31371 7.72792L10.5563 11.9706C10.9469 12.3611 11.58 12.3611 11.9706 11.9706Z" fill="currentColor"/>
+        </svg>
+        <h3 class="geolocation-modal-window__title">
+            Выберите город
+        </h3>
+        <div class="geolocation-modal-window__search">
+            <svg  class = "geolocation-modal-window__search-icon" width="1em" height="1em" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7 17C8.55556 17 14 11.3333 14 7.28571C14 3.2381 10.866 0 7 0C3.13401 0 0 3.26193 0 7.28571C0 11.3333 5.44444 17 7 17ZM7.09801 9.91667C8.81623 9.91667 10.2091 8.64814 10.2091 7.08333C10.2091 5.51853 8.81623 4.25 7.09801 4.25C5.37979 4.25 3.9869 5.51853 3.9869 7.08333C3.9869 8.64814 5.37979 9.91667 7.09801 9.91667Z" fill="currentColor"/>
+            </svg>
+
+            <input type="text" class="geolocation-modal-window__input search-input" value="Санкт-Петербург">
+        </div>
+
+    </div>
+    <div class="geolocation-modal-window__content-list select-list">
+        <ul>
+
+        </ul>
+    </div>
+</div>
+<div class="login-modal-window modal-window modal-window-inactive">
+    <div class="login-modal-window__header">
+        <svg class = "login-modal-window__close-button close-button" width="1em" height="1em" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9706 11.9706C12.3611 11.58 12.3611 10.9469 11.9706 10.5563L7.72792 6.31371L11.9706 2.07107C12.3611 1.68054 12.3611 1.04738 11.9706 0.656853C11.58 0.266329 10.9469 0.266329 10.5563 0.656853L6.31371 4.8995L2.07107 0.656855C1.68054 0.266331 1.04738 0.266331 0.656853 0.656856C0.266329 1.04738 0.266328 1.68054 0.656852 2.07107L4.89949 6.31371L0.656853 10.5563C0.266329 10.9469 0.266329 11.58 0.656853 11.9706C1.04738 12.3611 1.68054 12.3611 2.07107 11.9706L6.31371 7.72792L10.5563 11.9706C10.9469 12.3611 11.58 12.3611 11.9706 11.9706Z" fill="currentColor"/>
+        </svg>
+        <div class="login-modal-window__login-button login-button-active">Войти</div>
+        <div class="login-modal-window__register-button">Регистрация</div>
+    </div>
+    <div class="login-modal-window__main-content login-input-active">
+        <div class="login-modal-window__main-content-menu">
+            <input type="text" class="login-modal-window__main-content-menu-login-input login-input" placeholder="Email">
+            <input type="password" class="login-modal-window__main-content-menu-login-input login-input" placeholder="Пароль">
+        </div>
+        <div class="login-modal-window__main-content-menu">
+            <input type="text" class="login-modal-window__main-content-menu-register-input login-input" placeholder="Имя пользователя">
+            <input type="text" class="login-modal-window__main-content-menu-register-input login-input" placeholder="Email">
+            <input type="password" class="login-modal-window__main-content-menu-register-input login-input" placeholder="Пароль">
+            <input type="password" class="login-modal-window__main-content-menu-register-input login-input" placeholder="Повторите пароль">
+        </div>
+    </div>
+    <button class="login-modal-window__confirm-button button">Готово</button>
+</div>
+<main class="main">
 <header class="header">
-    <a href="Reviewer-main.html"><div class="header__site-name">
+    <a href="/home"><div class="header__site-name">
         Revie <svg width="1em" height="1em" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M2 13V8.5L2.00004 8.5L4.23328 5.99999L5.50005 5.99999L3.5 8.5H5.26677L5.26676 8.50001L6.76672 8.50001L6.76673 8.5H8.50004L10.7333 5.99999L12 5.99999L10 8.5H12.5V13C12.5 13.2761 12.2761 13.5 12 13.5H2.5C2.22386 13.5 2 13.2761 2 13ZM6.76673 8.5L8.76677 6L7.5 6L5.26677 8.5L6.76673 8.5ZM10.7476 0.0493882C10.8722 0.0165994 11.0005 0 11.1294 0H11.382C11.9501 0 12.4695 0.321003 12.7236 0.829179L12.8416 1.06525C12.9458 1.27353 13 1.5032 13 1.73607V2.25176C13 2.91717 12.5616 3.50305 11.9232 3.69081L7.472 5H13H13.5V5.5V13C13.5 13.8284 12.8284 14.5 12 14.5H2.5C1.67157 14.5 1 13.8284 1 13V7.43037C0.731698 7.34447 0.479739 7.17541 0.309754 6.90301C0.183602 6.70086 0 6.35947 0 6C0 5.60792 0.219436 5.23202 0.354243 5.02768C0.454159 4.87623 0.5 4.73728 0.5 4.62024V4.23607C0.5 4.0032 0.554218 3.77353 0.658359 3.56525L0.850432 3.1811C1.04337 2.79523 1.39311 2.5111 1.81033 2.40131L10.7476 0.0493882ZM2 7C2.55228 7 3 6.55228 3 6C3 5.44772 2.55228 5 2 5C1.44772 5 1 5.44772 1 6C1 6.55228 1.44772 7 2 7ZM8.73081 1.15436L9.54589 0.91315L10.3288 1.46124L10.7798 2.05781L11.0053 2.35609L11.2308 2.65438L10.7798 2.78487L10.3288 2.91536L9.54589 2.02576L8.73081 1.15436ZM6.81512 1.77069L6.00005 2.0119L6.81512 2.8833L7.59802 3.77291L8.04904 3.64241L8.50005 3.51192L8.27455 3.21364L8.04904 2.91535L7.59802 2.31878L6.81512 1.77069ZM3.86142 2.49996L3 2.76389L3.81507 3.63528L4.59797 4.52489L5.04899 4.3944L5.50001 4.2639L5.2745 3.96562L5.04899 3.66733L4.59797 3.07076L3.86142 2.49996Z" fill="currentColor"/>
     </svg>
@@ -49,6 +96,40 @@
     <h4 class="long-description__title">О фильме</h4>
     <p class="long-description__content"></p>
 </div>
+    <div class="main-content">
+        <p class="main-content__director-title main-title">Режиссёр</p>
+        <p class="main-content__director main-info"></p>
+        <p class="main-content__starring-title main-title">В ролях</p>
+        <p class="main-content__starring main-info"></p>
+        <p class="main-content__duration-title main-title">Длительность</p>
+        <p class="main-content__duration main-info"></p>
+        <p class="main-content__country-title main-title">Страна</p>
+        <p class="main-content__country main-info"></p>
+        <p class="main-content__release-title main-title">Год выпуска</p>
+        <p class="main-content__release main-info"></p>
+        <img src="" alt="" class="main-content__first-img small-img">
+        <img src="" alt="" class="main-content__second-img small-img">
+        <img src="" alt="" class="main-content__third-img long-img">
+    </div>
+    <div class="comments">
+        <div class="comments__header">
+            <h4 class="comments__title">Комментарии</h4>
+            <p class="comments_count">1</p>
+        </div>
+        <div class="comments__input-field">
+            <img src="" alt="" class="comments__user-img user-img">
+            <input type="text" class="comments__input">
+        </div>
+        <ul class="comments__all-messages">
+            <li>
+                <img src="" alt="" class="user-img">
+                <h4 class="comments__username">абоба</h4>
+                <p class="comments__mainText">Тралалела тралала или бр бр патапим????</p>
+            </li>
+        </ul>
+    </div>
+</main>
+<script defer src ="/static/js/header-modal-window.js"></script>
 <script defer src = "/static/js/Reviewer-film-page.js"></script>
 </body>
 </html>

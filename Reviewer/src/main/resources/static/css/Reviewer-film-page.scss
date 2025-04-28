@@ -3,5 +3,7 @@
 @use "normalize";
 @use "variables";
 @use "block/header";
+@use "block/modal-windows";
 @use "film-page-block/body";
 @use "film-page-block/head";
+@use "film-page-block/main-content";

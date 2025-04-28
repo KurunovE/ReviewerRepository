@@ -4,4 +4,12 @@ body{
   flex-direction: column;
   font-family: Inter,sans-serif;
   background-image: url(".././background/image_2025-04-17_21-54-53.png");
+
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 20px 10px rgba(0,0,0,0.75);
+  padding: 0 10px;
 }

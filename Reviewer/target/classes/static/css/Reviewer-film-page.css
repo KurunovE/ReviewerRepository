@@ -203,12 +203,217 @@ body {
   color: black;
 }
 
+.modal-background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: var(--z-index-modal-background);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal-background-inactive {
+  display: none;
+}
+
+.modal-window {
+  position: fixed;
+  z-index: var(--z-index-modal-window);
+  width: 20rem;
+  height: 25rem;
+  left: calc(50% - 10rem);
+  top: calc(50% - 12.5rem);
+  background-color: white;
+  transition: 0.3s;
+  color: var(--main-font-color);
+}
+
+.modal-window-active {
+  transform: scale(1);
+}
+
+.modal-window-inactive {
+  transform: scale(0);
+}
+
+.geolocation-modal-window {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px 20px 0 20px;
+  overflow: hidden;
+}
+.geolocation-modal-window__header {
+  z-index: var(--z-index-modal-header);
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--main-color-whiteGray);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.geolocation-modal-window__close-button {
+  right: 20px;
+  top: 20px;
+}
+.geolocation-modal-window__title {
+  padding: 20px;
+}
+.geolocation-modal-window__search {
+  margin: 0 30px 20px;
+  position: relative;
+}
+.geolocation-modal-window__search-icon {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+}
+.geolocation-modal-window__input {
+  width: 100%;
+  text-indent: 30px;
+}
+.geolocation-modal-window__input:focus {
+  text-indent: 30px;
+}
+.geolocation-modal-window__content-list ul {
+  padding: 0;
+  margin: 0;
+}
+
+.close-button {
+  transition: 0.5s;
+  position: absolute;
+  color: var(--main-font-color);
+  cursor: pointer;
+}
+.close-button:hover {
+  color: black;
+}
+
+.select-list {
+  overflow-y: scroll;
+}
+.select-list-item {
+  transition: 0.5s;
+  cursor: pointer;
+  padding: 5px 20px 5px;
+}
+.select-list-item:first-child {
+  padding-top: 20px;
+}
+.select-list-item:last-child {
+  padding-bottom: 20px;
+  border: none;
+}
+.select-list-item:hover {
+  background-color: var(--main-color-lightGray);
+  color: black;
+}
+
+.login-modal-window {
+  position: fixed;
+  z-index: var(--z-index-modal-window);
+  width: 24rem;
+  height: 20rem;
+  left: calc(50% - 12rem);
+  top: calc(50% - 10rem);
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.login-modal-window__header {
+  display: flex;
+  gap: 20px;
+  padding: 20px 20px 0;
+  color: var(--main-color-whiteGray);
+}
+.login-modal-window__login-button, .login-modal-window__register-button {
+  cursor: pointer;
+  transition: 0.5s;
+}
+.login-modal-window__login-button:hover, .login-modal-window__register-button:hover {
+  color: var(--main-font-color);
+}
+.login-modal-window__close-button {
+  top: 20px;
+  right: 20px;
+}
+.login-modal-window__main-content {
+  height: 70%;
+  width: 200%;
+  position: absolute;
+  display: flex;
+  margin: 0;
+  transition: 0.5s;
+}
+.login-modal-window__main-content-menu {
+  justify-content: center;
+  flex: 1 50%;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.login-modal-window__main-content-menu-login-input {
+  margin: 10px 50px;
+}
+.login-modal-window__main-content-menu-register-input {
+  margin: 0 50px;
+}
+.login-modal-window__confirm-button {
+  position: absolute;
+  bottom: 20px;
+  left: 33%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.focus-button {
+  color: var(--main-font-color);
+}
+
+.login-button-active {
+  color: var(--main-font-color);
+}
+
+.register-button-active {
+  color: var(--main-font-color);
+}
+
+.login-input-active {
+  transform: translateX(0);
+}
+
+.register-input-active {
+  transform: translateX(-50%);
+}
+
+.login-input {
+  text-indent: 0;
+  border-bottom: 1px solid var(--main-color-whiteGray);
+  transition: 0.5s;
+}
+.login-input::placeholder {
+  transition: 0.5s;
+  color: var(--main-color-Gray);
+}
+.login-input:focus {
+  border-bottom: 1px solid var(--main-font-color);
+}
+.login-input:focus::placeholder {
+  color: var(--main-font-color);
+}
+
 body {
   display: flex;
   align-items: center;
   flex-direction: column;
   font-family: Inter, sans-serif;
   background-image: url(".././background/image_2025-04-17_21-54-53.png");
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.75);
+  padding: 0 10px;
 }
 
 .head {
@@ -241,9 +446,6 @@ body {
 }
 .head__title {
   font-size: 1.4rem;
-}
-.head__short-description {
-  line-height: 1.2;
 }
 .head__third-part {
   text-align: center;
@@ -294,6 +496,52 @@ body {
 }
 .long-description__content {
   max-width: 850px;
+  font-size: 1.25rem;
+}
+
+.main-content {
+  width: 900px;
+  font-size: 1.25rem;
+  color: var(--main-font-color);
+  display: grid;
+  gap: 20px 20px;
+  margin: 0 77px 200px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 60px 1fr 60px 60px 60px;
+  grid-template-areas: "director-title director first-img second-img" "starring-title starring first-img second-img" "durration-title durration third-img third-img" "country-title country third-img third-img" "release-title release third-img third-img";
+}
+@media (max-width: 1040px) {
+  .main-content {
+    width: 100vw;
+  }
+}
+@media (max-width: 800px) {
+  .main-content {
+    width: 800px;
+  }
+}
+.main-content__first-img {
+  grid-area: first-img;
+}
+.main-content__second-img {
+  grid-area: second-img;
+}
+.main-content__third-img {
+  grid-area: third-img;
+}
+
+.small-img {
+  max-height: 230px;
+  min-width: 100%;
+}
+
+.long-img {
+  max-height: 230px;
+  min-width: 100%;
+}
+
+.main-title {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=Reviewer-film-page.css.map */
