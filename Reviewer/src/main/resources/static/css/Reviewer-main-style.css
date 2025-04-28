@@ -115,7 +115,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 100px;
   background-image: url(".././background/image_2025-04-17_21-54-53.png");
 }
 
