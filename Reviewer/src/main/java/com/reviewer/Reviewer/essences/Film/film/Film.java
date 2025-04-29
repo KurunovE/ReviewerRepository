@@ -1,7 +1,6 @@
 package com.reviewer.Reviewer.essences.Film.film;
 
 import com.reviewer.Reviewer.essences.Film.comment.Comment;
-import com.reviewer.Reviewer.essences.Film.genre.Genre;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -14,65 +13,86 @@ import java.util.Objects;
 @NoArgsConstructor
 public class Film {
     private final List<Comment> comments = new ArrayList<>();
-    final List<Genre> genres = new ArrayList<>();
-    String filmLink;
-    private long filmId;
-    private String filmTitle;
-    private double descRating;
-    private String descImage;
-    private String text;
+    private String genres;
+    String filmLink; // ссылка
+    private String filmTitle; // заголовок
+    private String descRating; // рейтинг
+    private List<String> descImages; // картинки
+    private String shortDescription; // малое описание
+    private String longDescription; // полная анотация
+    private String filmMaker; // режисёр
+    private List<String> artists; // актёры
+    private String time; // время
+    private String country;
+    private String releaseDate;
 
     public Film(final String filmLink,
+                final String genres,
+                final String time,
+                final List<String> artists,
+                final String filmMaker,
+                final String longDescription,
+                final String shortDescription,
+                final List<String> descImages,
                 final String filmTitle,
-                final double descRating,
-                final String descImage,
-                final String text) {
+                final String descRating,
+                final String country,
+                final String releaseDate) {
         this.filmLink = filmLink;
+        this.genres = genres;
+        this.time = time;
+        this.artists = artists;
+        this.filmMaker = filmMaker;
+        this.longDescription = longDescription;
+        this.shortDescription = shortDescription;
+        this.descImages = descImages;
         this.filmTitle = filmTitle;
         this.descRating = descRating;
-        this.descImage = descImage;
-        this.text = text;
+        this.country = country;
+        this.releaseDate = releaseDate;
     }
 
-    // COMMENT
-
-    public void addComment(final Comment comment) {
-        comments.add(comment);
-        comment.setFilm(this);
-    }
-
-    public void removeComment(final Comment comment) {
-        comments.remove(comment);
-        comment.setFilm(null);
-    }
-
-    // GENRE
-
-//    public void addGenre(final Genre genre) {
-//
-//    }
-
-    @Override
-    public boolean equals(Object o) {
+    public boolean equals(final Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Film film = (Film) o;
-        return filmId == film.filmId && filmTitle.equals(film.filmTitle);
+        final Film film = (Film) o;
+        return filmLink.equals(film.filmLink) &&
+                filmTitle.equals(film.filmTitle) &&
+                descRating.equals(film.descRating) &&
+                time.equals(film.time) &&
+                filmMaker.equals(film.filmMaker) &&
+                genres.equals(film.genres) &&
+                country.equals(film.country) &&
+                releaseDate.equals(film.releaseDate);
     }
 
-    @Override
     public int hashCode() {
-        return Objects.hash(filmId, filmTitle);
+        return Objects.hash(
+                comments,
+                genres,
+                filmLink,
+                filmTitle,
+                descRating,
+                descImages,
+                shortDescription,
+                longDescription,
+                filmMaker,
+                artists,
+                time,
+                country,
+                releaseDate
+        );
     }
 
-    @Override
     public String toString() {
-        return "Film{" +
-                "filmId=" + filmId +
-                ", title='" + filmTitle + "\'" +
+        return "Film{filmTitle=" + filmTitle +
+                ", filmLink=" + filmLink +
+                ", genres=" + genres +
                 ", descRating=" + descRating +
-                ", descImage='" + descImage + "\'" +
-                ", text='" + text + "\'" +
+                ", shortDescription=" + shortDescription +
+                ", longDescription=" + longDescription +
+                ", filmMaker=" + filmMaker +
+                ", time=" + time +
                 '}';
     }
 }
