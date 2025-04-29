@@ -28,4 +28,4 @@ settingsButton.addEventListener("click", ()=>{
 })
 username.textContent = currentUsername;
 email.textContent = currentEmail;
-avatar.src = `/static/avatar/${currentAvatar}`;
+avatar.src = `/avatar/${currentAvatar}`;
