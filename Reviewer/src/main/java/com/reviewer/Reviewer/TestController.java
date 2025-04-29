@@ -13,9 +13,13 @@ public class TestController {
         return "Reviewer-main";
     }
 
-//    @GetMapping("/profile")
-//    public String profile(@RequestParam(defaultValue = "Гость") String username, Model model) {
-//        model.addAttribute("username", username);
-//        return "reviewer-profile";
-//    }
+    @GetMapping("/profile")
+    public String profile() {
+        return "Reviewer-profile";
+    }
+
+    @GetMapping("/film")
+    public String film() {
+        return "Reviewer-film-page";
+    }
 }
