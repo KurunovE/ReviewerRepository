@@ -21,9 +21,9 @@ public class FilmController {
         return "Reviewer-main";
     }
 
-    @GetMapping("/film/{name}")
-    public String film(@PathVariable("name") String name, Model model) {
-        model.addAttribute("film", filmService.findFilmByFilmName(name));
+    @GetMapping("/film/{filmName}")
+    public String film(@PathVariable("filmName") String filmName, Model model) {
+        model.addAttribute("film", filmService.findFilmByFilmName(filmName));
         return "Reviewer-film-page";
     }
 }
