@@ -1,7 +1,7 @@
-package com.reviewer.Reviewer.essences.Film.comment;
+package com.reviewer.Reviewer.models.Film.comment;
 
-import com.reviewer.Reviewer.essences.Film.film.Film;
-import com.reviewer.Reviewer.essences.User.User;
+import com.reviewer.Reviewer.models.Film.film.Film;
+import com.reviewer.Reviewer.models.User.User;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,7 +10,6 @@ import java.util.Objects;
 @Data
 @NoArgsConstructor
 public class Comment {
-    private long commentId;
     private Film film;
     private User user;
     private String text;
@@ -26,21 +25,22 @@ public class Comment {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Comment comment = (Comment) o;
-        return commentId == comment.commentId;
+        return film.equals(comment.film) &&
+                user.equals(comment.user) &&
+                text.equals(comment.text);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(commentId);
+        return Objects.hash(text);
     }
 
     @Override
     public String toString() {
         return "Comment{" +
-                "commentId=" + commentId +
-                ", film=" + film.getFilmId() + ", " + film.getFilmTitle() +
-                ", author=" + user.getId() + ", " + user.getEmail() +
-                ", text='" + text + '\'' +
+                "author=" + user.getUsername() +
+                ", commentText=" + text +
+                ", film=" + film.getFilmTitle() +
                 '}';
     }
 }

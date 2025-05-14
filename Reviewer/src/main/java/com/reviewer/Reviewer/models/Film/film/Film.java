@@ -1,6 +1,8 @@
-package com.reviewer.Reviewer.essences.Film.film;
+package com.reviewer.Reviewer.models.Film.film;
 
-import com.reviewer.Reviewer.essences.Film.comment.Comment;
+import com.reviewer.Reviewer.models.Film.comment.Comment;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,7 +12,8 @@ import java.util.Objects;
 
 
 @Data
-@NoArgsConstructor
+@Builder
+@AllArgsConstructor
 public class Film {
     private final List<Comment> comments = new ArrayList<>();
     private String genres;
