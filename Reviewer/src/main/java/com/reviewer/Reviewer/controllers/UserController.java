@@ -1,12 +1,14 @@
 package com.reviewer.Reviewer.controllers;
 
 
+import com.reviewer.Reviewer.models.User.User;
 import com.reviewer.Reviewer.services.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -21,4 +23,5 @@ public class UserController {
         model.addAttribute("user", userService.findUserById(id));
         return "Reviewer-profile";
     }
+
 }
