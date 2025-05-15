@@ -4,7 +4,6 @@ import com.reviewer.Reviewer.models.Film.comment.Comment;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,6 +54,7 @@ public class Film {
         this.releaseDate = releaseDate;
     }
 
+    @Override
     public boolean equals(final Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -69,6 +69,7 @@ public class Film {
                 releaseDate.equals(film.releaseDate);
     }
 
+    @Override
     public int hashCode() {
         return Objects.hash(
                 comments,
@@ -87,6 +88,7 @@ public class Film {
         );
     }
 
+    @Override
     public String toString() {
         return "Film{filmTitle=" + filmTitle +
                 ", filmLink=" + filmLink +

@@ -3,7 +3,6 @@ package com.reviewer.Reviewer.models.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -12,7 +11,6 @@ import java.util.Objects;
 
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
 public class User {
 
@@ -58,6 +56,7 @@ public class User {
         return Objects.hash(id, username, email, password, birthday);
     }
 
+    @Override
     public String toString() {
         return "User{" +
                 "id=" + id +

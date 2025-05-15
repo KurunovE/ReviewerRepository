@@ -44,7 +44,7 @@ public class InMemoryFilmDAO {
 
     public Film findFilmByFilmName(String filmName) {
         return FILMS.stream()
-                .filter(e -> e.getFilmTitle().equals(filmName))
+                .filter(element -> element.getFilmTitle().equals(filmName))
                 .findFirst()
                 .orElse(null);
     }
