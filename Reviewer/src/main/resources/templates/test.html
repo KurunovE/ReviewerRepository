@@ -6,9 +6,13 @@
 </head>
 <body>
 <p th:text="${film.getFilmTitle()}">Значение по умолчанию</p>
-<p th:text="${film.getArtists()}">Значение по умолчанию</p>
+<!--<div th:each="*{film.getArtists()}">-->
+<!--    <p th:text="*{film.getArtists().getFirst()}">Значение по умолчанию</p>-->
+<!--</div>-->
+<p th:text="*{film.getArtists()}">Значение по умолчанию</p>
 <p th:text="${film.getFilmMaker()}">Значение по умолчанию</p>
 <p th:text="${film.getCountry()}">Значение по умолчанию</p>
 <p th:text="${film.getDescImages()}">Значение по умолчанию</p>
+<p th:text="${film.getLongDescription()}">Значение по умолчанию</p>
 </body>
 </html>

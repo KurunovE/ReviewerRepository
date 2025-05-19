@@ -43,4 +43,10 @@ public class InMemoryUserServiceImpl implements UserService {
     public User updateBirthday(long id, LocalDate newBirthday) {
         return repository.updateBirthday(id, newBirthday);
     }
+
+    @Override
+    public User createUser(String username, String email,
+                           String password, LocalDate birthday) {
+        return repository.createUser(username, email, password, birthday);
+    }
 }

@@ -20,23 +20,23 @@ public class User {
     private String password;
     private LocalDate birthday;
 
-    public User(final String username,
-                final String email,
-                final String password) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
-    }
-
-    public User(final String username,
-                final String email,
-                final String password,
-                final LocalDate birthday) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.birthday = birthday;
-    }
+//    public User(final String username,
+//                final String email,
+//                final String password) {
+//        this.username = username;
+//        this.email = email;
+//        this.password = password;
+//    }
+//
+//    public User(final String username,
+//                final String email,
+//                final String password,
+//                final LocalDate birthday) {
+//        this.username = username;
+//        this.email = email;
+//        this.password = password;
+//        this.birthday = birthday;
+//    }
 
     public int getAge() {
         return (int) ChronoUnit.YEARS.between(birthday, LocalDate.now());
