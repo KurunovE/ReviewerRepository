@@ -20,11 +20,6 @@ public class InMemoryUserServiceImpl implements UserService {
     }
 
     @Override
-    public User saveUser(User user) {
-        return repository.saveUser(user);
-    }
-
-    @Override
     public User updateUsername(long id, String newUsername) {
         return repository.updateUsername(id, newUsername);
     }

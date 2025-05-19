@@ -16,14 +16,6 @@ public class InMemoryUserDAO {
                     .email("admin@example.com")
                     .password("admin")
                     .birthday(LocalDate.of(1990, 1, 1))
-                    .build(),
-
-            User.builder()
-                    .id(1)
-                    .username("admin2")
-                    .email("admin2@example.com")
-                    .password("admin2")
-                    .birthday(LocalDate.of(1990, 1, 2))
                     .build()
     );
 
@@ -82,7 +74,7 @@ public class InMemoryUserDAO {
                 .password(password)
                 .birthday(birthday)
                 .build();
-        return user;
+        return saveUser(user);
     }
 
     private long createUserId() {
