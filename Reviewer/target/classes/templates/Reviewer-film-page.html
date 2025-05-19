@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/Reviewer-film-page.css">
@@ -76,17 +76,17 @@
 </header>
 <div class="head">
     <div class="head__first-part">
-        <img class = "head__film-img" src="" alt="">
+        <img class = "head__film-img" th:src="${film.getDescImages()[0]}" alt="">
     </div>
     <div class="head__second-part">
-        <div class="head__genre"></div>
-        <h4 class="head__title"></h4>
-        <div class="head__short-description"></div>
+        <div class="head__genre" th:text = "${film.getGenres()}"></div>
+        <h4 class="head__title" th:text = "${film.getFilmTitle()}"></h4>
+        <div class="head__short-description" th:text = "${film.getShortDescription()}"></div>
     </div>
     <div class="head__third-part">
-        <p class="head__film-rating"></p>
+        <p class="head__film-rating" th:text = "${film.getDescRating()}"></p>
         <p class="head__film-rating-title">Рейтинг кинопоиска</p>
-        <a href="" class="head__film-trailer-redirect"><svg width="10" height="10" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <a th:href="${film.getFilmLink()}" class="head__film-trailer-redirect"><svg width="10" height="10" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6.5 3.13397C7.16667 3.51887 7.16667 4.48113 6.5 4.86603L2 7.4641C1.33333 7.849 0.5 7.36788 0.5 6.59808V1.40192C0.5 0.632124 1.33333 0.150998 2 0.535898L6.5 3.13397Z" fill="white"/>
         </svg>
             Смотреть трейлер</a>
@@ -94,22 +94,22 @@
 </div>
 <div class="long-description">
     <h4 class="long-description__title">О фильме</h4>
-    <p class="long-description__content"></p>
+    <p class="long-description__content" th:text="${film.getLongDescription()}"></p>
 </div>
     <div class="main-content">
         <p class="main-content__director-title main-title">Режиссёр</p>
-        <p class="main-content__director main-info"></p>
+        <p class="main-content__director main-info" th:text = "${film.getFilmMaker()}"></p>
         <p class="main-content__starring-title main-title">В ролях</p>
-        <p class="main-content__starring main-info"></p>
+        <p class="main-content__starring main-info" th:text = "${film.getArtists()}"></p>
         <p class="main-content__duration-title main-title">Длительность</p>
-        <p class="main-content__duration main-info"></p>
+        <p class="main-content__duration main-info"th:text = "${film.getTime()}"></p>
         <p class="main-content__country-title main-title">Страна</p>
-        <p class="main-content__country main-info"></p>
+        <p class="main-content__country main-info" th:text = "${film.getCountry()}"></p>
         <p class="main-content__release-title main-title">Год выпуска</p>
-        <p class="main-content__release main-info"></p>
-        <img src="" alt="" class="main-content__first-img small-img">
-        <img src="" alt="" class="main-content__second-img small-img">
-        <img src="" alt="" class="main-content__third-img long-img">
+        <p class="main-content__release main-info" th:text = "${film.getReleaseDate()}"></p>
+        <img th:src="${film.getDescImages()[1]}" alt="" class="main-content__first-img small-img">
+        <img th:src="${film.getDescImages()[2]}" alt="" class="main-content__second-img small-img">
+        <img th:src="${film.getDescImages()[3]}" alt="" class="main-content__third-img long-img">
     </div>
     <div class="comments">
         <div class="comments__header">
@@ -130,6 +130,6 @@
     </div>
 </main>
 <script defer src ="/js/header-modal-window.js"></script>
-<script defer src = "/js/Reviewer-film-page.js"></script>
+<script type = "text/javascript" th:src = "@{/js/Reviewer-film-page-back.js}"></script>
 </body>
 </html>
