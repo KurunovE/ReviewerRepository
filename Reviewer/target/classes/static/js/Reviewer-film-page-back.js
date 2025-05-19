@@ -2,7 +2,7 @@ const artists = document.querySelector(".main-content__starring");
 const rating = document.querySelector(".head__film-rating");
 let ratingNumber = +rating.textContent;
 if (ratingNumber >= 7){
-    rating.style.color = "green";
+    rating.style.color = "#3FCF74;";
 }
 else if (ratingNumber >=4){
     rating.style.color = "orange";
