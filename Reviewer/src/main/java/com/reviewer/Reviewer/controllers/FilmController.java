@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/api/v1/films")
+@RequestMapping("/films")
 @AllArgsConstructor
 public class FilmController {
 
@@ -21,7 +21,7 @@ public class FilmController {
         return "Reviewer-main";
     }
 
-    @GetMapping("/film/{filmName}")
+    @GetMapping("/{filmName}")
     public String film(@PathVariable("filmName") String filmName, Model model) {
         model.addAttribute("film", filmService.findFilmByFilmName(filmName));
         return "Reviewer-film-page";
