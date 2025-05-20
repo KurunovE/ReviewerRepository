@@ -534,6 +534,10 @@ body {
   color: var(--main-color-lightGray);
 }
 
+.image-slide {
+  object-fit: cover;
+}
+
 .main__collection {
   width: 855px;
   margin: var(--main-margin-top) var(--main-margin-left-right-sides) 0;

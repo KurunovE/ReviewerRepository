@@ -171,7 +171,6 @@ let headerSlider = shuffle(filmObjects).slice(0,7);
 headerSlider.forEach( (item) => {
     let redirect = document.createElement("a");
     redirect.href = "/films" + item.href;
-    redirect.classList.add("main__collection-redirect-block");
     let img = document.createElement("img");
     img.src = item.img;
     img.classList.add("image-slide");
