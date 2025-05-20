@@ -40,8 +40,7 @@ public class InMemoryUserServiceImpl implements UserService {
     }
 
     @Override
-    public User createUser(String username, String email,
-                           String password, LocalDate birthday) {
-        return repository.createUser(username, email, password, birthday);
+    public User saveUser(User user) {
+        return repository.saveUser(user);
     }
 }
