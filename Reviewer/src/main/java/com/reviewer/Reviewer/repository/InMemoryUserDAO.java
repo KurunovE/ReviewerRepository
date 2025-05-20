@@ -11,7 +11,7 @@ public class InMemoryUserDAO {
 
     private final List<User> USERS = List.of(
             User.builder()
-                    .id(0)
+                    .id(0L)
                     .username("admin")
                     .email("admin@example.com")
                     .password("admin")
