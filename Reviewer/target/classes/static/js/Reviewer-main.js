@@ -2,7 +2,6 @@ const bigSliderLine = document.querySelector(".main__big-swiper-wrapper");
 const normalSliderLine = document.querySelector(".main__normal-swiper-wrapper");
 const secondNormalSliderLine = document.querySelector(" .main__second-normal-swiper-wrapper");
 const thirdNormalSliderLine = document.querySelector(".main__third-normal-swiper-wrapper");
-const mainCollection = document.querySelector(".main__collection-redirect-block-container");
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
     while (currentIndex !== 0) {
