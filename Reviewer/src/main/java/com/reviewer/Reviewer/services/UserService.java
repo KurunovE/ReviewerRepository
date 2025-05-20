@@ -10,5 +10,5 @@ public interface UserService {
     User updateEmail(long id, String newEmail);
     User updatePassword(long id, String newPassword);
     User updateBirthday(long id, LocalDate newBirthday);
-    User saveUser(User user);
+    User createUser(String username, String email, String password, LocalDate birthday);
 }

@@ -19,7 +19,7 @@ public class InMemoryFilmDAO {
                     .descImages(List.of("https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/430042eb-ee69-4818-aed0-a312400a26bf/600x900",
                             "/FilmImg/Interstellar1-short.png",
                             "/FilmImg/Interstellar2-short.png",
-                            "/FilmImg/Interstellar3-long.png"))
+                            "jetbrains://idea/navigate/reference?project=Reviewer&path=static%2FFilmImg%2FInterstellar3-long.png"))
                     .filmTitle("Интерстеллар")
                     .descRating("8.7")
                     .country("США, Великобритания, Канада")
@@ -63,7 +63,6 @@ public class InMemoryFilmDAO {
                     .country("Франция")
                     .releaseDate("2011")
                     .build(),
-
             Film.builder()
                     .filmLink("https://www.youtube.com/watch?v=kgAeKpAPOYk")
                     .genres("Драма 18+")
@@ -80,8 +79,8 @@ public class InMemoryFilmDAO {
                     .shortDescription("Бухгалтер Энди Дюфрейн обвинён в убийстве собственной жены и её любовника. Оказавшись в тюрьме под названием Шоушенк, он сталкивается с жестокостью и беззаконием, царящими по обе стороны решётки. Каждый, кто попадает в эти стены, становится их рабом до конца жизни. Но Энди, обладающий живым умом и доброй душой, находит подход как к заключённым, так и к охранникам, добиваясь их особого к себе расположения.")
                     .descImages(List.of(
                             "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/0b76b2a2-d1c7-4f04-a284-80ff7bb709a4/600x900",
-                            "/FilmImg/ES1-short.png",
-                            "/FilmImg/ES2-short.png",
+                            "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/4f0f0e31-4f8d-43cf-9c95-1a4d42606ba1/3840x",
+                            "https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/55d72401-ba33-4cf5-924f-822c45486261/3840x",
                             "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/15a79875-4799-46fd-b51b-d3a9b42cdfe3/3840x"
                     ))
                     .filmTitle("Побег из Шоушенка")
@@ -93,10 +92,6 @@ public class InMemoryFilmDAO {
 
     public List<Film> findAllFilms() {
         return FILMS;
-    }
-
-    public void save(Film film) {
-        FILMS.add(film);
     }
 
     public Film findFilmByFilmName(String filmName) {

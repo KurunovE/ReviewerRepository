@@ -1,6 +1,5 @@
 package com.reviewer.Reviewer.models.User;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,13 +10,11 @@ import java.util.Objects;
 
 
 @Data
-@Entity(name = "user")
-@Table(name = "users")
+@Builder
+@AllArgsConstructor
 public class User {
-    @Id
-    @GeneratedValue
-    private Long id;
-    @Column(unique = true)
+
+    private long id;
     private String username;
     private String email;
     private String password;
