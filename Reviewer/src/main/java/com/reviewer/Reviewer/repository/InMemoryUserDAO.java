@@ -4,20 +4,13 @@ import com.reviewer.Reviewer.models.User.User;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
 public class InMemoryUserDAO {
 
-    private final List<User> USERS = List.of(
-            User.builder()
-                    .id(0L)
-                    .username("admin")
-                    .email("admin@example.com")
-                    .password("admin")
-                    .birthday(LocalDate.of(1990, 1, 1))
-                    .build()
-    );
+    private final List<User> USERS = new ArrayList<>();
 
     public User findUserById(final long id) {
         return USERS.stream()
@@ -63,25 +56,5 @@ public class InMemoryUserDAO {
             user.setBirthday(newBirthday);
         }
         return user;
-    }
-
-    public User createUser(final String username, final String email,
-                           final String password, final LocalDate birthday) {
-        var user = User.builder()
-                .id(createUserId())
-                .username(username)
-                .email(email)
-                .password(password)
-                .birthday(birthday)
-                .build();
-        return saveUser(user);
-    }
-
-    private long createUserId() {
-        long id = 0;
-        while (findUserById(id) != null) {
-            id++;
-        }
-        return id;
     }
 }

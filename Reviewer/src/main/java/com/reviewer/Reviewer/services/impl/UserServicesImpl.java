@@ -1,46 +1,47 @@
 package com.reviewer.Reviewer.services.impl;
 
 import com.reviewer.Reviewer.models.User.User;
-import com.reviewer.Reviewer.repository.InMemoryUserDAO;
+import com.reviewer.Reviewer.repository.UserRepository;
 import com.reviewer.Reviewer.services.UserService;
 import lombok.AllArgsConstructor;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 
 @Service
 @AllArgsConstructor
-public class InMemoryUserServiceImpl implements UserService {
-
-    private final InMemoryUserDAO repository;
+@Primary
+public class UserServicesImpl implements UserService {
+    private final UserRepository userRepository;
 
     @Override
     public User findUserById(long id) {
-        return repository.findUserById(id);
+        return userRepository.findById(id).orElse(null);
     }
 
     @Override
     public User updateUsername(long id, String newUsername) {
-        return repository.updateUsername(id, newUsername);
+        return null;
     }
 
     @Override
     public User updateEmail(long id, String newEmail) {
-        return repository.updateEmail(id, newEmail);
+        return null;
     }
 
     @Override
     public User updatePassword(long id, String newPassword) {
-        return repository.updatePassword(id, newPassword);
+        return null;
     }
 
     @Override
     public User updateBirthday(long id, LocalDate newBirthday) {
-        return repository.updateBirthday(id, newBirthday);
+        return null;
     }
 
     @Override
     public User saveUser(User user) {
-        return repository.saveUser(user);
+        return userRepository.save(user);
     }
 }
