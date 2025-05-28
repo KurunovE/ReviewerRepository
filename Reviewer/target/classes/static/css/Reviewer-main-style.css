@@ -93,6 +93,7 @@ body {
   --main-color-DarkGray: rgb(160, 160, 160);
   --main-color-backgroundGray: rgb(128,128,128);
   --main-color-backgroundDarkGray: rgb(110,110,110);
+  --main-color-Red: rgb(255,0,0);
   --z-index-modal-window:100;
   --z-index-modal-background:90;
   --z-index-modal-header:110;
@@ -284,6 +285,14 @@ body {
   margin: 0;
 }
 
+.geolocation-list-item {
+  padding: 5px;
+  cursor: pointer;
+}
+.geolocation-list-item:hover {
+  background-color: var(--main-color-lightGray);
+}
+
 .close-button {
   transition: 0.5s;
   position: absolute;
@@ -366,7 +375,7 @@ body {
 }
 .login-modal-window__confirm-button {
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   left: 33%;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -406,6 +415,25 @@ body {
 }
 .login-input:focus::placeholder {
   color: var(--main-font-color);
+}
+
+.register-input-inactive {
+  border-bottom: 1px solid var(--main-color-Red);
+}
+.register-input-inactive::placeholder {
+  color: var(--main-color-Red);
+}
+
+.login-modal-window__register-alert-message {
+  color: var(--main-color-Red);
+  position: absolute;
+  left: 420px;
+  bottom: 0;
+  font-size: 0.8rem;
+}
+
+.register-alert-message-inactive {
+  display: none;
 }
 
 .main__big-slider {

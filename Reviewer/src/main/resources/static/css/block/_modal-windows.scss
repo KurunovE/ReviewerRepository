@@ -67,6 +67,14 @@
     }
   }
 }
+.geolocation-list-item{
+  padding: 5px;
+  cursor: pointer;
+
+  &:hover{
+    background-color: var(--main-color-lightGray);
+  }
+}
 .close-button{
   transition: .5s;
   position: absolute;
@@ -151,7 +159,7 @@
   }
   &__confirm-button{
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     left:33%;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -187,4 +195,20 @@
     }
   }
 }
+.register-input-inactive{
+  border-bottom: 1px solid var(--main-color-Red);
+  &::placeholder{
+    color: var(--main-color-Red);
+  }
 
+}
+.login-modal-window__register-alert-message{
+  color: var(--main-color-Red);
+  position: absolute;
+  left: 420px;
+  bottom: 0;
+  font-size: .8rem;
+}
+.register-alert-message-inactive{
+  display: none;
+}

@@ -93,6 +93,7 @@ body {
   --main-color-DarkGray: rgb(160, 160, 160);
   --main-color-backgroundGray: rgb(128,128,128);
   --main-color-backgroundDarkGray: rgb(110,110,110);
+  --main-color-Red: rgb(255,0,0);
   --z-index-modal-window:100;
   --z-index-modal-background:90;
   --z-index-modal-header:110;
