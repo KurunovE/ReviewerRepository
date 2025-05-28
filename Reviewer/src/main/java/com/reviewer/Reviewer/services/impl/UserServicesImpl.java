@@ -21,6 +21,11 @@ public class UserServicesImpl implements UserService {
     }
 
     @Override
+    public User findUserByEmail(String email) {
+        return userRepository.findUserByEmail(email);
+    }
+
+    @Override
     public User updateUsername(long id, String newUsername) {
         return null;
     }

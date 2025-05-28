@@ -19,6 +19,13 @@ public class InMemoryUserDAO {
                 .orElse(null);
     }
 
+    public User findUserByEmail(final String email) {
+        return USERS.stream()
+                .filter(element -> element.getEmail().equals(email))
+                .findFirst()
+                .orElse(null);
+    }
+
     public User saveUser(final User user) {
         if (user != null) {
             USERS.add(user);

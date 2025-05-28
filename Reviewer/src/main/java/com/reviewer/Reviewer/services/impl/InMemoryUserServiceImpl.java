@@ -20,6 +20,11 @@ public class InMemoryUserServiceImpl implements UserService {
     }
 
     @Override
+    public User findUserByEmail(String email) {
+        return repository.findUserByEmail(email);
+    }
+
+    @Override
     public User updateUsername(long id, String newUsername) {
         return repository.updateUsername(id, newUsername);
     }

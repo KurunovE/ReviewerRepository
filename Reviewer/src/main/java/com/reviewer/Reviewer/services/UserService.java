@@ -6,6 +6,7 @@ import java.time.LocalDate;
 
 public interface UserService {
     User findUserById(long id);
+    User findUserByEmail(String email);
     User updateUsername(long id, String newUsername);
     User updateEmail(long id, String newEmail);
     User updatePassword(long id, String newPassword);
