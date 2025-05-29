@@ -97,6 +97,8 @@ body {
   --z-index-modal-window:100;
   --z-index-modal-background:90;
   --z-index-modal-header:110;
+  --z-index-userBlock:105;
+  --z-index-userWindow:106;
   --z-index-header: 80;
   --z-index-big-slider-button: 70;
   --main-margin-left-right-sides: 188.5px;

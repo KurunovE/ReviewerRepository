@@ -97,6 +97,8 @@ body {
   --z-index-modal-window:100;
   --z-index-modal-background:90;
   --z-index-modal-header:110;
+  --z-index-userBlock:105;
+  --z-index-userWindow:106;
   --z-index-header: 80;
   --z-index-big-slider-button: 70;
   --main-margin-left-right-sides: 188.5px;
@@ -199,10 +201,6 @@ body {
   border-radius: var(--header-border-radius);
   padding: 0 5px;
 }
-.header__userProfile:hover {
-  background-color: var(--main-color-Gray);
-  color: black;
-}
 
 .button {
   background-color: var(--main-color-lightGray);
@@ -220,19 +218,52 @@ body {
 
 .header__userBlock {
   display: flex;
+  position: relative;
+  z-index: 107;
 }
 
 .header__userProfile {
+  position: relative;
   min-width: 120px;
   padding: 0 10px;
   display: flex;
   align-items: center;
   gap: 5px;
+  z-index: var(--z-index-userBlock);
 }
 
 .header__username {
   flex: 1;
   text-align: center;
+}
+
+.header__profileWindow {
+  width: calc(100% - 2 * var(--header-margin-block));
+  left: var(--header-margin-block);
+  top: var(--header-margin-block);
+  padding: 50px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid var(--main-color-whiteGray);
+  background-color: var(--main-color-Gray);
+  border-radius: var(--header-border-radius);
+  visibility: hidden;
+  position: absolute;
+}
+.header__profileWindow > * {
+  text-align: center;
+}
+
+.header__userBlock:hover .header__profileWindow, .header__profileWindow:hover {
+  visibility: visible;
+}
+
+.removeLocalStorage {
+  cursor: pointer;
+}
+.removeLocalStorage:hover {
+  color: var(--main-font-dark-color);
 }
 
 .modal-background {

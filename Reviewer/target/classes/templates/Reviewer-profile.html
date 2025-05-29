@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Reviewer</title>
@@ -14,8 +14,8 @@
     </div>
     <div class="main__head">
         <img src="" alt="" class="main__head-avatar">
-        <h4 class="main__head-username">adad</h4>
-        <p class="main__head-email">dsad</p>
+        <h4 class="main__head-username" th:text="${user.getUsername()}">adad</h4>
+        <p class="main__head-email" th:text="${user.getEmail()}">dsad</p>
     </div>
     <div class="main__profile-content content-active profile-content">
         <form action="" class="main__profile-content-inputs">

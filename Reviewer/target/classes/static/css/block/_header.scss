@@ -75,11 +75,6 @@
   border: 1px solid var(--main-color-Gray);
   border-radius: var(--header-border-radius);
   padding:0 5px;
-
-  &:hover{
-    background-color: var(--main-color-Gray);
-    color:black;
-  }
 }
 .button{
   background-color: var(--main-color-lightGray);
@@ -96,15 +91,45 @@
 }
 .header__userBlock{
   display: flex;
+  position: relative;
+  z-index: 107;
 }
 .header__userProfile{
+  position: relative;
   min-width: 120px;
   padding: 0 10px;
   display: flex;
   align-items: center;
   gap: 5px;
+  z-index: var(--z-index-userBlock);
 }
 .header__username{
   flex: 1;
   text-align: center;
+}
+.header__profileWindow{
+  width: calc(100% - 2*var(--header-margin-block));
+  left: var(--header-margin-block);
+  top: var(--header-margin-block);
+  padding: 50px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid var(--main-color-whiteGray);
+  background-color: var(--main-color-Gray);
+  border-radius: var(--header-border-radius);
+  visibility: hidden;
+  position: absolute;
+   > * {
+     text-align: center;
+   }
+}
+.header__userBlock:hover .header__profileWindow, .header__profileWindow:hover{
+  visibility: visible;
+}
+.removeLocalStorage{
+  cursor: pointer;
+  &:hover{
+    color: var(--main-font-dark-color);
+  }
 }

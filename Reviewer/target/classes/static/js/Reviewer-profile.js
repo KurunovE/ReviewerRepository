@@ -26,6 +26,4 @@ settingsButton.addEventListener("click", ()=>{
     settingsContent.classList.add("content-active");
 
 })
-username.textContent = currentUsername;
-email.textContent = currentEmail;
 avatar.src = `/avatar/${currentAvatar}`;
