@@ -14,10 +14,10 @@ import java.time.LocalDate;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @JsonIgnore
     private Long id;
     @Column(unique = true)
     private String username;
+    @Column(unique = true)
     private String email;
     private String password;
     private LocalDate birthday;
