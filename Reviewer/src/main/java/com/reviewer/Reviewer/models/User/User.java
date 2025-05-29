@@ -1,7 +1,6 @@
 package com.reviewer.Reviewer.models.User;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
