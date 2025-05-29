@@ -1,4 +1,5 @@
   .header{
+  padding: 0 27px;
   display: flex;
   justify-self: center;
   justify-content: space-between;
@@ -68,6 +69,18 @@
 .header__button{
   margin:var(--header-margin-block);
 }
+.header__userProfile{
+  margin: var(--header-margin-block);
+  background-color: var(--main-color-whiteGray);
+  border: 1px solid var(--main-color-Gray);
+  border-radius: var(--header-border-radius);
+  padding:0 5px;
+
+  &:hover{
+    background-color: var(--main-color-Gray);
+    color:black;
+  }
+}
 .button{
   background-color: var(--main-color-lightGray);
   transition: .5s;
@@ -76,7 +89,22 @@
   border-radius: var(--header-border-radius);
   cursor: pointer;
   &:hover{
+    transition: .5s;
     background-color: var(--main-color-whiteGray);
     color:black;
   }
+}
+.header__userBlock{
+  display: flex;
+}
+.header__userProfile{
+  min-width: 120px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.header__username{
+  flex: 1;
+  text-align: center;
 }

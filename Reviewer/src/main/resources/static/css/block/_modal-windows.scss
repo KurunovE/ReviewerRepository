@@ -82,6 +82,7 @@
   cursor: pointer;
   &:hover{
     color:black;
+    transform: scale(1.1);
   }
 }
 .select-list{
@@ -121,9 +122,11 @@
     display: flex;
     gap: 20px;
     padding:20px 20px 0;
-    color: var(--main-color-whiteGray);
+    color: var(--main-color-Gray);
   }
   &__login-button,&__register-button{
+    font-weight: bold;
+    font-size: 1.2rem;
     cursor: pointer;
     transition: .5s;
     &:hover{
@@ -182,11 +185,11 @@
 }
 .login-input{
   text-indent: 0;
-  border-bottom: 1px solid var(--main-color-whiteGray);
+  border-bottom: 1px solid var(--main-color-DarkGray);
   transition: .5s;
   &::placeholder{
     transition: .5s;
-    color:var(--main-color-Gray)
+    color:var(--main-color-DarkGray)
   }
   &:focus{
     border-bottom: 1px solid var(--main-font-color);
@@ -202,6 +205,16 @@
   }
 
 }
+.login-modal-window__login-alert-message{
+  color: var(--main-color-Red);
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  font-size: .8rem;
+}
+.login-alert-message-inactive{
+  display: none;
+}
 .login-modal-window__register-alert-message{
   color: var(--main-color-Red);
   position: absolute;
@@ -211,4 +224,9 @@
 }
 .register-alert-message-inactive{
   display: none;
+}
+
+.disabled{
+  pointer-events: none;
+  color: var(--main-color-whiteGray);
 }

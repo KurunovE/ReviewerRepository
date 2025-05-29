@@ -112,6 +112,7 @@ body {
 "--swiper-pagination-bullet-horizontal-gap": "6px"
 */
 .header {
+  padding: 0 27px;
   display: flex;
   justify-self: center;
   justify-content: space-between;
@@ -191,6 +192,18 @@ body {
   margin: var(--header-margin-block);
 }
 
+.header__userProfile {
+  margin: var(--header-margin-block);
+  background-color: var(--main-color-whiteGray);
+  border: 1px solid var(--main-color-Gray);
+  border-radius: var(--header-border-radius);
+  padding: 0 5px;
+}
+.header__userProfile:hover {
+  background-color: var(--main-color-Gray);
+  color: black;
+}
+
 .button {
   background-color: var(--main-color-lightGray);
   transition: 0.5s;
@@ -200,8 +213,26 @@ body {
   cursor: pointer;
 }
 .button:hover {
+  transition: 0.5s;
   background-color: var(--main-color-whiteGray);
   color: black;
+}
+
+.header__userBlock {
+  display: flex;
+}
+
+.header__userProfile {
+  min-width: 120px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.header__username {
+  flex: 1;
+  text-align: center;
 }
 
 .modal-background {
@@ -293,6 +324,7 @@ body {
 }
 .close-button:hover {
   color: black;
+  transform: scale(1.1);
 }
 
 .select-list {
@@ -331,9 +363,11 @@ body {
   display: flex;
   gap: 20px;
   padding: 20px 20px 0;
-  color: var(--main-color-whiteGray);
+  color: var(--main-color-Gray);
 }
 .login-modal-window__login-button, .login-modal-window__register-button {
+  font-weight: bold;
+  font-size: 1.2rem;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -395,12 +429,12 @@ body {
 
 .login-input {
   text-indent: 0;
-  border-bottom: 1px solid var(--main-color-whiteGray);
+  border-bottom: 1px solid var(--main-color-DarkGray);
   transition: 0.5s;
 }
 .login-input::placeholder {
   transition: 0.5s;
-  color: var(--main-color-Gray);
+  color: var(--main-color-DarkGray);
 }
 .login-input:focus {
   border-bottom: 1px solid var(--main-font-color);
@@ -416,6 +450,18 @@ body {
   color: var(--main-color-Red);
 }
 
+.login-modal-window__login-alert-message {
+  color: var(--main-color-Red);
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  font-size: 0.8rem;
+}
+
+.login-alert-message-inactive {
+  display: none;
+}
+
 .login-modal-window__register-alert-message {
   color: var(--main-color-Red);
   position: absolute;
@@ -426,6 +472,11 @@ body {
 
 .register-alert-message-inactive {
   display: none;
+}
+
+.disabled {
+  pointer-events: none;
+  color: var(--main-color-whiteGray);
 }
 
 body {
