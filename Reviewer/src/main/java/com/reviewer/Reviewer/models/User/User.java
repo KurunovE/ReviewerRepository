@@ -12,10 +12,12 @@ import java.time.LocalDate;
 @Table(name = "Users")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
     private Long id;
     @Column(unique = true)
     private String username;
+    private String firstName;
+    private String lastName;
     @Column(unique = true)
     private String email;
     private String password;

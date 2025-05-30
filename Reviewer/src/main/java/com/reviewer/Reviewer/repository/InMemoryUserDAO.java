@@ -32,36 +32,4 @@ public class InMemoryUserDAO {
         }
         return findUserById(user.getId());
     }
-
-    public User updateUsername(final long id, final String newUsername) {
-        var user = findUserById(id);
-        if (user != null && newUsername != null) {
-            user.setUsername(newUsername);
-        }
-        return user;
-    }
-
-    public User updateEmail(final long id, final String newEmail) {
-        var user = findUserById(id);
-        if (user != null && newEmail != null) {
-            user.setEmail(newEmail);
-        }
-        return user;
-    }
-
-    public User updatePassword(final long id, final String newPassword) {
-        var user = findUserById(id);
-        if (user != null && newPassword != null) {
-            user.setPassword(newPassword);
-        }
-        return user;
-    }
-
-    public User updateBirthday(final long id, final LocalDate newBirthday) {
-        var user = findUserById(id);
-        if (user != null && newBirthday != null) {
-            user.setBirthday(newBirthday);
-        }
-        return user;
-    }
 }
