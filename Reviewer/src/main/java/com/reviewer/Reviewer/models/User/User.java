@@ -22,6 +22,4 @@ public class User {
     private String email;
     private String password;
     private LocalDate birthday;
-    @Transient
-    private int age;
 }

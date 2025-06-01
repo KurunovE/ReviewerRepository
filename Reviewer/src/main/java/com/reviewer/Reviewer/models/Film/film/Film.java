@@ -1,11 +1,10 @@
 package com.reviewer.Reviewer.models.Film.film;
 
-import com.reviewer.Reviewer.models.Film.comment.Comment;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,9 +13,8 @@ import java.util.Objects;
 @Builder
 @AllArgsConstructor
 public class Film {
-    private final List<Comment> comments = new ArrayList<>();
     private String genres;
-    String filmLink; // ссылка
+    private String filmLink; // ссылка
     private String filmTitle; // заголовок
     private String descRating; // рейтинг
     private List<String> descImages; // картинки
@@ -72,7 +70,6 @@ public class Film {
     @Override
     public int hashCode() {
         return Objects.hash(
-                comments,
                 genres,
                 filmLink,
                 filmTitle,
