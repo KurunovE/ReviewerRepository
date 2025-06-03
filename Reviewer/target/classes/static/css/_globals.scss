@@ -2,7 +2,8 @@ a{
   text-decoration: none;
   color: var(--main-font-color);
 }
-input {
+input,textarea {
+  resize: none;
   outline: none;
   border: none;
   text-indent: 15px;
@@ -12,4 +13,8 @@ button {
 }
 ul {
   list-style-type: none;
+}
+.disabled{
+  pointer-events: none;
+  color: var(--main-color-whiteGray);
 }

@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded',() => {
                         password: password,
                         birthday: "1973-12-31"
                     }
-                    let promise = fetch("api/v1/user/save_user",{
+                    let promise = fetch("http://localhost:8081/api/v1/user/save_user",{
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"
@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded',() => {
                 this.classList.add("disabled");
                 let email = loginEmail.value;
                 let password = loginPassword.value
-                let promise = fetch(`api/v1/user?email=${email}`)
+                let promise = fetch(`http://localhost:8081/api/v1/user?email=${email}`)
                     .then(item => {
                         let json = item.json()
                             .then(item => {
@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded',() => {
                                         <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M15.4688 5.15625C15.4688 8.00397 13.1602 10.3125 10.3125 10.3125C7.46478 10.3125 5.15625 8.00397 5.15625 5.15625C5.15625 2.30853 7.46478 0 10.3125 0C13.1602 0 15.4688 2.30853 15.4688 5.15625Z" fill="white"/>
                                             <path d="M16.4232 12.375H4.20181C3.47697 12.375 2.76598 12.5735 2.14601 12.9491L1.80186 13.1576C1.30128 13.4608 0.910811 13.9162 0.687537 14.4572C0.270192 15.4684 0.492109 16.6324 1.28166 17.3896C2.11735 18.1911 3.21727 19.1992 4.125 19.8712C5.66181 21.009 6.49183 21.8966 8.25 22.37C9.82255 22.7933 10.8024 22.7933 12.375 22.37C14.1332 21.8966 14.9632 21.009 16.5 19.8712C17.4077 19.1992 18.5077 18.1911 19.3433 17.3896C20.1329 16.6324 20.3548 15.4684 19.9375 14.4572C19.7142 13.9162 19.3237 13.4608 18.8231 13.1576L18.479 12.9491C17.859 12.5735 17.148 12.375 16.4232 12.375Z" fill="white"/>
-                                        </svg>
+                                        </svg>  
                                         <div class="header__username">${item.username}</div>
                                     </div> 
                                     <div class="header__profileWindow">
@@ -276,6 +276,7 @@ document.addEventListener('DOMContentLoaded',() => {
                                     <div class="removeLocalStorage">Выйти</div>
                                     </div>
                                                         `;
+                                    location.reload();
                                     const removeLocalStorage = document.querySelector(".removeLocalStorage");
                                     if (removeLocalStorage) {
                                         removeLocalStorage.addEventListener("click", function () {

@@ -18,24 +18,24 @@
         <p class="main__head-email" th:text="${user.getEmail()}">dsad</p>
     </div>
     <div class="main__profile-content content-active profile-content">
-        <form action="" class="main__profile-content-inputs">
-        <label for="surname" class="main__profile-content-label input-label">Фамилия</label>
-        <input type="text" id="surname" class="main__profile-content-input input" placeholder="...">
-        <label for="name" class="main__profile-content-label input-label">Имя</label>
-        <input type="text" id="name" class="main__profile-content-input input" placeholder="...">
-        <label for="patronymic" class="main__profile-content-label input-label">Отчество <span>(при наличии)</span></label>
-        <input type="text" id="patronymic" class="main__profile-content-input input" placeholder="...">
-            <button class="main__profile-content-save-button button profile-info">Сохранить</button>
-        </form>
+        <div class="main__profile-content-inputs">
+        <label for="lastname" class="main__profile-content-label input-label">Фамилия</label>
+        <input type="text" id="lastname" class="main__profile-content-input input" placeholder="...">
+        <label for="firstname" class="main__profile-content-label input-label">Имя</label>
+        <input type="text" id="firstname" class="main__profile-content-input input" placeholder="...">
+        <p class="main__profile-content-alert-message profile-alert hidden">Данные профиля сохранены</p>
+        <button class="main__profile-content-save-button button profile-info">Сохранить</button>
+        </div>
     </div>
     <div class="main__profile-content content-inactive settings-content">
-    <form action="" class="main__profile-content-inputs">
+    <div class="main__profile-content-inputs">
         <label for="password" class="main__profile-content-label input-label">Новый пароль</label>
         <input type="password" id="password" class="main__profile-content-input input" placeholder="...">
         <label for="repeat-password" class="main__profile-content-label input-label">Повторите пароль</label>
         <input type="password" id="repeat-password" class="main__profile-content-input input" placeholder="...">
+        <p class="main__profile-content-alert-message settings-alert hidden">Пароли не совпадают</p>
         <button class="main__profile-content-save-button button settings">Сохранить</button>
-    </form>
+    </div>
     </div>
 </main>
 <script defer src="/js/Reviewer-profile.js"></script>

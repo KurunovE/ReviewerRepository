@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/Reviewer-film-page.css">
-    <title th:text="${film.getFilmTitle()}"></title> <!-- Сделать динамическую смену названия в зависимости от названия фильма-->
+    <title th:text="${film.getFilmTitle()}"></title>
 </head>
 <body>
 <div class="modal-background modal-background-inactive"></div>
@@ -116,21 +116,23 @@
     <div class="comments">
         <div class="comments__header">
             <h4 class="comments__title">Комментарии</h4>
-            <p class="comments_count">1</p>
+            <p class="comments__count">1</p>
         </div>
         <div class="comments__input-field">
-            <img src="" alt="" class="comments__user-img user-img">
-            <input type="text" class="comments__input">
+            <img src="/avatar/profile2.jpg" alt="" class="comments__user-img user-img">
+            <textarea class="comments__input" placeholder="Ваш комментарий..."></textarea>
         </div>
+        <button class="comments__add-comment">Оставить комментарий</button>
         <ul class="comments__all-messages">
-            <li>
-                <img src="" alt="" class="user-img">
-                <h4 class="comments__username">абоба</h4>
-                <p class="comments__mainText">Тралалела тралала или бр бр патапим????</p>
-            </li>
+<!--            <li class="comment">-->
+<!--                <img src="/avatar/profile2.jpg" alt="" class="user-img">-->
+<!--                <h4 class="comment__username">абоба</h4>-->
+<!--                <p class="comment__mainText">Тралалела тралала или бр бр патапим????</p>-->
+<!--            </li>-->
         </ul>
     </div>
 </main>
+<script  defer src="/js/comments.js"></script>
 <script defer src ="/js/header-modal-window.js"></script>
 <script type = "text/javascript" th:src = "@{/js/Reviewer-film-page-back.js}"></script>
 </body>

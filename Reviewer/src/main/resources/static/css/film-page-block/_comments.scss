@@ -1,3 +1,84 @@
 .comments{
+  align-self: flex-start;
+  margin-left: 77px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding-bottom: 80px;
 
+  &__header{
+    display: flex;
+    font-size: 1.2rem;
+    gap: 15px;
+
+  }
+  &__title{
+
+  }
+  &__count{
+    color: var(--main-color-DarkGray);
+    font-weight: bold;
+  }
+  &__input-field{
+    display: flex;
+    gap: 20px;
+  }
+
+  &__input{
+    background-color: var(--main-color-whiteGray);
+    width: max(30vw, 80%);
+    text-indent: 0;
+    padding: 10px  20px;
+    border-radius: 30px;
+
+    &::placeholder{
+      color: var(--main-color-DarkGray);
+    }
+  }
+   &__add-comment{
+     position: relative;
+     border-radius: 30px;
+     padding: 10px 15px;
+     border: 1px solid black;
+     flex: 0;
+     text-align: center;
+     align-self: flex-end;
+     font-size: .7rem;
+     top: -20px;
+     cursor: pointer;
+
+     &:hover{
+       background-color: var(--main-color-whiteGray);
+     }
+   }
+  &__all-messages{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+
+}
+.user-img{
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 50px;
+  flex: 0;
+}
+.comment{
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas: "img username"
+                         "void text";
+  align-items: center;
+  column-gap: 20px;
+  &__username{
+    font-size: 1.1rem;
+
+  }
+
+  &__mainText{
+    grid-area: text;
+  }
 }

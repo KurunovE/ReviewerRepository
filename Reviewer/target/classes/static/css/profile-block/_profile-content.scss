@@ -50,3 +50,19 @@
     border-color: var(--main-color-backgroundDarkGray);
   }
 }
+.input-inactive{
+  border: 1px solid var(--main-color-Red);
+  &::placeholder{
+    color: var(--main-color-Red);
+  }
+}
+.label-error{
+  color: var(--main-color-Red);
+}
+.main__profile-content-alert-message{
+  color: var(--main-color-Red);
+  margin-top: 15px;
+}
+.hidden{
+  visibility: hidden;
+}
